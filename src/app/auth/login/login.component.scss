@@ -1,0 +1,124 @@
+////@import "compass/css3";
+//
+$body-bg: #c1bdba;
+$form-bg: #13232f;
+$white: #ffffff;
+
+$main: linear-gradient(to right, #0030b8 0%, #0030b89e 100%);
+//$main: #1ab188;
+//$main-light: lighten($main, 5%);
+//$main-dark: darken($main, 5%);
+
+$gray-light: #a0b3b0;
+$gray: #ddd;
+
+$thin: 300;
+$normal: 400;
+$bold: 600;
+$br: 4px;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.box-login {
+  background: #FFFFFF;
+  border-radius: 3px;
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.main-login {
+  margin-top: 60px;
+  padding-top: 80px;
+}
+
+.logo {
+  color: #0030B8;
+  padding: 20px;
+  margin-left: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
+  text-shadow: 0 1px 0 #ffffff;
+}
+
+.header-login {
+  color: #7F7F7F;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.nav-tabs .nav-link {
+  background: #d2d8d8;
+  color: #809191;
+  border: none;
+  border-top-left-radius: 0rem;
+  border-top-right-radius: 0rem;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  border: none;
+  background: #ffffff;
+}
+
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .nav {
+    .nav-item {
+      display: block;
+      text-decoration: none;
+      padding: 15px;
+      background: rgba($gray-light, .25);
+      color: $gray-light;
+      font-size: 20px;
+      float: left;
+      width: 50%;
+      text-align: center;
+      cursor: pointer;
+      transition: .5s ease;
+
+      &:hover {
+        //background: $main-dark;
+        color: #809191;
+        background: rgba(160, 179, 176, 0.57);
+      }
+
+      &.active {
+        background: $white;
+        color: #212529;
+      }
+    }
+  }
+}
+
+.form-group {
+  position: relative;
+
+  .input-icon {
+    position: absolute;
+    top: 30px;
+    left: 7px;
+    color: #747d86;
+    font-size: 1rem;
+
+    img {
+      width: 19px;
+    }
+  }
+
+  input {
+    padding: 0.375rem 2.3rem;
+  }
+}
+
+

@@ -1,0 +1,126 @@
+/* You can add global styles to this file, and also import other style files */
+$body-bg: #c1bdba;
+$form-bg: #13232f;
+$white: #ffffff;
+
+$main: linear-gradient(to right, #0030b8 0%, #0030b89e 100%);
+
+$gray-light: #a0b3b0;
+$gray: #ddd;
+
+$thin: 300;
+$normal: 400;
+$bold: 600;
+$br: 4px;
+
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+body.login {
+  background: #625F59 url(/assets/images/login_bg.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #212529;
+  border-color: #dfdfdf;
+
+  &:hover {
+    color: #212529;
+    background-color: #60696f14;
+    border-color: #dfdfdf;
+  }
+}
+
+.fa-times {
+  color: #dc3545;
+}
+
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  font-size: 2rem;
+  font-weight: $bold;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: $main;
+  color: $white;
+  transition: all .5s ease;
+  -webkit-appearance: none;
+
+  &:hover, &:focus {
+    //background: $main-dark;
+    color: $white;
+  }
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+.badge {
+  font-size: inherit;
+  padding: 15px;
+  color: #212529;
+  width: 100%;
+  text-align: left;
+  margin: 30px 0;
+}
+
+// form-validate
+.form-control {
+  border-radius: 0rem;
+}
+
+label.required {
+  &:after {
+    content: " *";
+    color: #dc3545;
+  }
+}
+
+.invalid-control {
+  input:not(.ag-floating-filter-input), .trigger-field, select {
+    border-color: #dc3545;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .error-messages {
+    & > div {
+      color: #dc3545;
+      bottom: -10px;
+      padding: 0;
+    }
+  }
+}

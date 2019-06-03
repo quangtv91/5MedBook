@@ -1,0 +1,42 @@
+.logo {
+  color: #0030B8;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
+  color: #0030B8;
+}
+
+.dropdown-toggle.cart-list::after {
+  display: none;
+}
+
+.fa-shopping-cart {
+  font-size: 16px;
+}
+
+.input-group {
+  position: relative;
+
+  .input-icon {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    z-index: 9;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+
+    :hover {
+      color: black;
+    }
+  }
+
+  input {
+    min-width: 450px;
+  }
+}
+
+
+
