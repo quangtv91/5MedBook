@@ -1,3 +1,48 @@
-<p>
-  book-list works!
-</p>
+<div class="container">
+  <div class="search">
+    <div class="text-center">
+      <h1 class="logo">5MedBook</h1>
+      <span class="slogan d-block">Search and get any book with only $5</span>
+    </div>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <form class="form-inline d-block pt-5 text-center">
+          <div class="input-group">
+            <span class="input-icon search"><i class="fa fa-search"></i></span>
+            <input type="text" class="form-control" placeholder="Search for Title/Author/ISBN...">
+          </div>
+        </form>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+  <div class="content pt-5">
+    <div class="row mb-3" *ngFor="let item of bookListData; let item = index">
+      <div class="col-md-2">
+        <div class="book-image">
+          <img [src]="item.imageUrl" class="rounded mx-auto d-block" alt="...">
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div class="book-info">
+          <span class="title d-block">{{item.title}}</span>
+          <span class="author d-block">{{item.author}}</span>
+          <div class="book-details pt-3">
+            <div class="row px-3 pb-3 justify-content-between">
+              <div>
+                <span class="price">${{item.price}}</span>
+                <button class="btn btn-primary mx-3">Get this book</button>
+                <button class="btn btn-default btn-cart"><i class="fa fa-shopping-cart"></i></button>
+              </div>
+              <div>
+                <span class="downloads mr-5">{{item.downloads}} Downloads</span>
+                <span class="year">Year: {{item.year}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

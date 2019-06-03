@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-book-list',
@@ -7,7 +7,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookListComponent implements OnInit {
 
-  constructor() { }
+  bookListData = [
+    {
+      id: 1,
+      title: 'Dac nhan tam',
+      author: 'Dale Carnegie',
+      price: '500',
+      downloads: '1500',
+      year: '2019',
+      imageUrl: 'assets/images/book-1.jpg'
+    },
+    {
+      id: 2,
+      title: 'Dac nhan tam',
+      author: 'Dale Carnegie',
+      price: '500',
+      downloads: '1500',
+      year: '2019',
+      imageUrl: 'assets/images/book-1.jpg'
+    },
+    {
+      id: 3,
+      title: 'Dac nhan tam',
+      author: 'Dale Carnegie',
+      price: '500',
+      downloads: '1500',
+      year: '2019',
+      imageUrl: 'assets/images/book-1.jpg'
+    }
+  ];
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
