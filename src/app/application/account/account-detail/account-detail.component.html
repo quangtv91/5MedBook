@@ -1,5 +1,5 @@
 <div class="container">
-  <span class="badge badge-light">Account Detail</span>
+  <span class="badge badge-light badge-page">Account Detail</span>
   <div class="row mx-0">
     <form [formGroup]="form" *ngIf="form" class="form-horizontal w-100" novalidate autocomplete="off">
       <div class="form-group row">
@@ -51,7 +51,7 @@
       <div class="form-group row">
         <label class="col-sm-2 col-form-label"></label>
         <div class="col-sm-10">
-          <button type="submit" class="btn button button-block" (click)="onSubmitData()">Save Change
+          <button type="submit" class="btn btn-primary d-block w-100" (click)="onSubmitData()">Save Change
           </button>
         </div>
       </div>
