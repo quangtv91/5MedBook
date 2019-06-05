@@ -1,5 +1,4 @@
 $logoTextColor: #0030B8;
-$textColor: rgba(0, 0, 0, 0.5);
 
 .search {
   .logo {
@@ -9,74 +8,5 @@ $textColor: rgba(0, 0, 0, 0.5);
     font-size: 2.5rem;
     font-weight: 800;
   }
-
-  .slogan {
-    color: $textColor;
-  }
-
-  .input-group {
-    position: relative;
-
-    .input-icon {
-      position: absolute;
-      top: 0px;
-      right: 10px;
-      z-index: 9;
-      color: $textColor;
-      cursor: pointer;
-
-      :hover {
-        color: $logoTextColor;
-      }
-
-      .fa {
-        font-size: 20px;
-      }
-    }
-
-    input {
-      border-top: 0;
-      border-right: 0;
-      border-left: 0;
-      border-top-color: white;
-      box-shadow: none;
-      border-bottom: 3px solid #CCCCCC;
-    }
-  }
 }
 
-.content {
-  .content-detail {
-    border-bottom: 1px solid #dddddd;
-  }
-  .book-image {
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  }
-
-  .book-info {
-    .title {
-      font-size: larger;
-      font-weight: 600;
-    }
-
-    .author {
-      color: $logoTextColor;
-      font-style: italic;
-      font-weight: 600;
-    }
-
-    .type, .size, .year {
-      color: #4E4E4E;
-    }
-
-    .date-order {
-      color: #9B9B9B;
-      font-style: italic;
-      font-weight: 600;
-    }
-  }
-
-}

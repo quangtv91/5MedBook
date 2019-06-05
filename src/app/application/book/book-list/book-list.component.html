@@ -18,7 +18,7 @@
     </div>
   </div>
   <div class="content pt-3">
-    <div class="row py-3 content-detail" *ngFor="let item of bookListData; let item = index">
+    <div class="row py-2 content-detail" *ngFor="let item of bookListData; let item = index">
       <div class="col-md-2">
         <div class="book-image">
           <img [src]="item.imageUrl" class="rounded mx-auto d-block" alt="...">
@@ -26,8 +26,8 @@
       </div>
       <div class="col-md-10">
         <div class="book-info">
-          <span class="title d-block">{{item.title}}</span>
-          <span class="author d-block">{{item.author}}</span>
+          <a class="title d-block">{{item.title}}</a>
+          <a class="author d-block">{{item.author}}</a>
           <div class="book-details pt-3">
             <div class="row px-3 pb-3 justify-content-between">
               <div>
