@@ -47,6 +47,9 @@ $textColor: rgba(0, 0, 0, 0.5);
 }
 
 .content {
+  .content-detail {
+    border-bottom: 1px solid #dddddd;
+  }
   .book-image {
     img {
       max-width: 100%;

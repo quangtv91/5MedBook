@@ -1,25 +1,25 @@
 <div class="container">
   <span class="badge badge-light badge-page">My Book</span>
   <div class="search">
-    <div class="text-center">
-      <h1 class="logo">5MedBook</h1>
-      <span class="slogan d-block">Search and get any book with only $5</span>
-    </div>
+    <!--<div class="text-center">-->
+      <!--<h1 class="logo">5MedBook</h1>-->
+      <!--<span class="slogan d-block">Search and get any book with only $5</span>-->
+    <!--</div>-->
     <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
-        <form class="form-inline d-block pt-5 text-center">
+      <!--<div class="col-md-2"></div>-->
+      <div class="col-md-12">
+        <form class="form-inline d-block pt-2 text-center">
           <div class="input-group">
             <span class="input-icon search"><i class="fa fa-search"></i></span>
-            <input type="text" class="form-control" placeholder="Search for Title/Author/ISBN...">
+            <input type="text" class="form-control" placeholder="Search My Books...">
           </div>
         </form>
       </div>
-      <div class="col-md-2"></div>
+      <!--<div class="col-md-2"></div>-->
     </div>
   </div>
-  <div class="content pt-5">
-    <div class="row mb-3" *ngFor="let item of myBookListData; let item = index">
+  <div class="content pt-3">
+    <div class="row py-3 content-detail" *ngFor="let item of myBookListData; let item = index">
       <div class="col-md-2">
         <div class="book-image">
           <img [src]="item.imageUrl" class="rounded mx-auto d-block" alt="...">
@@ -27,8 +27,8 @@
       </div>
       <div class="col-md-10">
         <div class="book-info">
-          <span class="title d-block">{{item.title}}</span>
-          <span class="author d-block">{{item.author}}</span>
+          <a class="title d-block">{{item.title}}</a>
+          <a class="author d-block">{{item.author}}</a>
           <div class="book-details pt-3">
             <div class="row px-3 pb-3 justify-content-between">
               <div>

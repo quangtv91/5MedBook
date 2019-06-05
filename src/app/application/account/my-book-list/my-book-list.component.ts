@@ -16,7 +16,7 @@ export class MyBookListComponent implements OnInit {
       type: 'PDF',
       size: '15M',
       year: '2019',
-      imageUrl: 'assets/images/book-1.jpg'
+      imageUrl: 'assets/images/book-demo.jpg'
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ export class MyBookListComponent implements OnInit {
       type: 'PDF',
       size: '23M',
       year: '2019',
-      imageUrl: 'assets/images/book-1.jpg'
+      imageUrl: 'assets/images/book-demo.jpg'
     },
   ];
 

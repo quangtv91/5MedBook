@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8">
-        <form class="form-inline d-block pt-5 text-center">
+        <form class="form-inline d-block pt-4 text-center">
           <div class="input-group">
             <span class="input-icon search"><i class="fa fa-search"></i></span>
             <input type="text" class="form-control" placeholder="Search for Title/Author/ISBN...">
@@ -17,8 +17,8 @@
       <div class="col-md-2"></div>
     </div>
   </div>
-  <div class="content pt-5">
-    <div class="row mb-3" *ngFor="let item of bookListData; let item = index">
+  <div class="content pt-3">
+    <div class="row py-3 content-detail" *ngFor="let item of bookListData; let item = index">
       <div class="col-md-2">
         <div class="book-image">
           <img [src]="item.imageUrl" class="rounded mx-auto d-block" alt="...">

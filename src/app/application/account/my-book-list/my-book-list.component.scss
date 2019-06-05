@@ -19,7 +19,7 @@ $textColor: rgba(0, 0, 0, 0.5);
 
     .input-icon {
       position: absolute;
-      top: -5px;
+      top: 0px;
       right: 10px;
       z-index: 9;
       color: $textColor;
@@ -30,7 +30,7 @@ $textColor: rgba(0, 0, 0, 0.5);
       }
 
       .fa {
-        font-size: 26px;
+        font-size: 20px;
       }
     }
 
@@ -46,6 +46,9 @@ $textColor: rgba(0, 0, 0, 0.5);
 }
 
 .content {
+  .content-detail {
+    border-bottom: 1px solid #dddddd;
+  }
   .book-image {
     img {
       max-width: 100%;

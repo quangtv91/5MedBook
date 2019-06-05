@@ -15,7 +15,7 @@ export class BookListComponent implements OnInit {
       price: '500',
       downloads: '1500',
       year: '2019',
-      imageUrl: 'assets/images/book-1.jpg'
+      imageUrl: 'assets/images/book-demo.jpg'
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ export class BookListComponent implements OnInit {
       price: '500',
       downloads: '1500',
       year: '2019',
-      imageUrl: 'assets/images/book-1.jpg'
+      imageUrl: 'assets/images/book-demo.jpg'
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ export class BookListComponent implements OnInit {
       price: '500',
       downloads: '1500',
       year: '2019',
-      imageUrl: 'assets/images/book-1.jpg'
+      imageUrl: 'assets/images/book-demo.jpg'
     }
   ];
 
