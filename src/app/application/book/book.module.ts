@@ -5,12 +5,14 @@ import {BookRoutingModule} from './book-routing.module';
 import {BookListComponent} from './book-list/book-list.component';
 import {BookDetailComponent} from './book-detail/book-detail.component';
 import {CheckoutListComponent} from './checkout-list/checkout-list.component';
+import {BookAuthorListComponent} from './book-author-list/book-author-list.component';
 
 @NgModule({
   declarations: [
     BookListComponent,
     BookDetailComponent,
     CheckoutListComponent,
+    BookAuthorListComponent,
   ],
   imports: [
     CommonModule,

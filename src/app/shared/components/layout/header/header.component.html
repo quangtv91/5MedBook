@@ -1,48 +1,78 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand logo" routerLink="/book-list">5MedBook</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <!--<form class="form-inline my-2 my-lg-0">-->
-    <!--<div class="input-group">-->
-    <!--<span class="input-icon search"><i class="fa fa-search"></i></span>-->
-    <!--<input type="text" class="form-control" placeholder="Search">-->
-    <!--</div>-->
-    <!--</form>-->
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown"
-           aria-haspopup="true" aria-expanded="false">All Book
-        </a>
-        <div class="dropdown-menu dropdown-menu-right dropdown-default">
-          <app-category-book-list></app-category-book-list>
+  <div class="container">
+    <a class="navbar-brand logo" routerLink="/book-list">5MedBook</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="form-inline my-2 my-lg-0">
+        <div class="input-group">
+          <span class="input-icon search"><i class="fa fa-search"></i></span>
+          <input type="text" class="form-control" placeholder="Search">
         </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle cart-list" data-toggle="dropdown"
-           aria-haspopup="true" aria-expanded="false">Cart <i class="fa fa-shopping-cart"></i><span
-          class="badge badge-danger">2</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right dropdown-default">
-          <app-cart-list></app-cart-list>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown"
-           aria-haspopup="true" aria-expanded="false">
-          My Account
-        </a>
-        <div class="dropdown-menu dropdown-menu-right dropdown-default">
-          <a class="dropdown-item" routerLink="/my-book">My Book</a>
-          <a class="dropdown-item" routerLink="/account-detail">Account Detail</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" (click)="onLogout()">Log out</a>
-        </div>
-      </li>
-    </ul>
+      </form>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">All Book
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-default">
+            <app-category-book-list></app-category-book-list>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle cart-list" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">Cart <i class="fa fa-shopping-cart"></i><span
+            class="badge badge-danger">2</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-default">
+            <app-cart-list></app-cart-list>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">
+            My Account
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-default">
+            <a class="dropdown-item" routerLink="/my-book">My Book</a>
+            <a class="dropdown-item" routerLink="/account-detail">Account Detail</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" (click)="onLogout()">Log out</a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 
-<swal-alert #logoutSwalAlert></swal-alert>
+<div bsModal #logoutModal="bs-modal" class="modal fade" [config]="{ backdrop: 'static' }">
+  <div class="modal-dialog modal-dialog-centered modal-confirm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Logout</h5>
+        <button type="button" class="close" (click)="logoutModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card-body">
+          <div class="date-time">
+            <div class="row  mx-0">
+              Do you want to logout?
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="onSubmitLogout()">
+          <i class="fa fa-check"></i> Yes
+        </button>
+        <button class="btn btn-secondary" (click)="logoutModal.hide()">
+          <i class="fa fa-times"></i> No
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

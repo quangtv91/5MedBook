@@ -30,18 +30,19 @@
 
   .input-icon {
     position: absolute;
-    top: 6px;
+    top: 3px;
     right: 10px;
     z-index: 9;
     color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
 
     :hover {
-      color: black;
+      color: #4080ff;
     }
   }
 
   input {
+    height: 25px;
     min-width: 450px;
   }
 }

@@ -1,4 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {ModalDirective} from 'ngx-bootstrap';
+import {BookService} from '../../../core/services/book/book.service';
 
 @Component({
   selector: 'app-my-book-list',
@@ -6,6 +8,7 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./my-book-list.component.scss']
 })
 export class MyBookListComponent implements OnInit {
+  @ViewChild('deleteMyBookModal') deleteMyBookModal: ModalDirective;
 
   myBookListData = [
     {
@@ -30,10 +33,24 @@ export class MyBookListComponent implements OnInit {
     },
   ];
 
-  constructor() {
+  constructor(
+    private bookService: BookService
+  ) {
   }
 
   ngOnInit() {
+  }
+
+  onDelete() {
+    this.deleteMyBookModal.show();
+  }
+
+  onSubmitDelete() {
+    this.bookService.deleteMyBook().subscribe(res => {
+      console.log(res);
+    }, error => {
+      console.log(error);
+    });
   }
 
 }

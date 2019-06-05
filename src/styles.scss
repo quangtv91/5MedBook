@@ -55,6 +55,10 @@ button {
   cursor: pointer;
 }
 
+h5 {
+  font-weight: 600;
+}
+
 .fa-times {
   color: #dc3545;
 }
@@ -72,22 +76,30 @@ button {
     &:hover {
       box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
     }
-  }
 
-  &.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
-    color: $mainColor;
-    background-color: transparent;
+    &.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+      color: $mainColor;
+      background-color: transparent;
+    }
   }
 
   &.btn-cart {
     background-color: transparent;
     border-radius: 50%;
     border: 1px solid #61D8CA;
+
+    &:hover {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
   }
 
   &.btn-cart-bg {
     background-color: #61D8CA;
     border-radius: 50%;
+
+    &:hover {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
   }
 
   &.btn-secondary {
@@ -105,6 +117,25 @@ button {
 
     &.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
       color: #212529;
+      background-color: transparent;
+    }
+  }
+
+  &.btn-danger {
+    color: #dc3545;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 4px 16px;
+    font-size: 14px;
+    font-weight: bold;
+
+    &:hover {
+      box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+    }
+
+    &.btn-danger:not(:disabled):not(.disabled):active, .btn-danger:not(:disabled):not(.disabled).active, .show > .btn-danger.dropdown-toggle {
+      color: #dc3545;
       background-color: transparent;
     }
   }
@@ -230,6 +261,7 @@ label.required {
   .content-detail {
     border-bottom: 1px solid #dddddd;
   }
+
   .book-image {
     img {
       max-width: 100%;
@@ -245,6 +277,7 @@ label.required {
 
     .author {
       font-style: italic;
+      font-weight: 600;
     }
 
     .title, .author {
@@ -254,8 +287,27 @@ label.required {
       }
     }
 
-    .author, .downloads, .year {
+    .author, .type, .size, .downloads, .year {
       color: #4E4E4E;
+    }
+
+    .date-order {
+      color: #9B9B9B;
+      font-style: italic;
+      font-weight: 600;
     }
   }
 }
+
+.modal-confirm {
+  .fa-question-circle {
+    font-size: x-large;
+    vertical-align: middle;
+    padding: 0 5px 0 15px;
+  }
+
+  .fa-times {
+    color: #212529;
+  }
+}
+

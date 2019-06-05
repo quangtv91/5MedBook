@@ -4,9 +4,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {FormValidationModule} from './form-validation/form-validation.module';
-import {CoreModule} from '../core/core.module';
+import {ModalModule} from 'ngx-bootstrap';
 import {NgxSpinnerModule} from 'ngx-spinner';
 import {SweetAlert2Module} from '@sweetalert2/ngx-sweetalert2';
+import {CoreModule} from '../core/core.module';
 
 import {HomeComponent} from '../home/home.component';
 import {FooterComponent, HeaderComponent} from './components/layout';
@@ -38,9 +39,10 @@ const Layout = [
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
-    CoreModule,
+    ModalModule,
     NgxSpinnerModule,
     SweetAlert2Module,
+    CoreModule,
   ],
   exports: [
     CommonModule,
@@ -48,6 +50,7 @@ const Layout = [
     FormValidationModule,
     ReactiveFormsModule,
     HttpClientModule,
+    ModalModule,
     NgxSpinnerModule,
     SweetAlert2Module,
     SpinnerComponent,

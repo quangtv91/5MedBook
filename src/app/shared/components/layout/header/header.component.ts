@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {SwalAlertService} from '../../swal-alert/swal-alert.service';
-import {SwalAlertComponent} from '../../swal-alert/swal-alert.component';
+import {Router} from '@angular/router';
+import {ModalDirective} from 'ngx-bootstrap';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +8,10 @@ import {SwalAlertComponent} from '../../swal-alert/swal-alert.component';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @ViewChild('logoutSwalAlert') private logoutSwalAlert: SwalAlertComponent;
+  @ViewChild('logoutModal') logoutModal: ModalDirective;
 
   constructor(
-    private swalAlertService: SwalAlertService,
+    private router: Router,
   ) {
   }
 
@@ -19,7 +19,19 @@ export class HeaderComponent implements OnInit {
   }
 
   onLogout() {
-    this.swalAlertService.openWarningModal();
+    this.logoutModal.show();
+  }
+
+  onSubmitLogout() {
+    localStorage.clear();
+    setTimeout(() => {
+      const modalElem = document.querySelector('bs-modal-backdrop');
+      if (modalElem && modalElem.classList.contains('show')) {
+        modalElem.classList.remove('modal-backdrop', 'fade', 'in', 'show');
+      }
+      document.body.classList.add('login');
+      this.router.navigate(['/auth/login']);
+    }, 100);
   }
 
 }
