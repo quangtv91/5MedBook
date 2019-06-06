@@ -4,23 +4,28 @@ import {BookListComponent} from './book-list/book-list.component';
 import {BookDetailComponent} from './book-detail/book-detail.component';
 import {CheckoutListComponent} from './checkout-list/checkout-list.component';
 import {BookAuthorListComponent} from './book-author-list/book-author-list.component';
+import {CategoryBookListComponent} from './category-book-list/category-book-list.component';
 
 const routes: Routes = [
   {
     path: 'book-list',
-    component: BookListComponent
+    component: BookListComponent,
   },
   {
     path: 'book-detail/:id',
-    component: BookDetailComponent
+    component: BookDetailComponent,
   },
   {
     path: 'checkout-list',
-    component: CheckoutListComponent
+    component: CheckoutListComponent,
   },
   {
     path: 'author',
-    component: BookAuthorListComponent
+    component: BookAuthorListComponent,
+  },
+  {
+    path: 'category-list',
+    component: CategoryBookListComponent,
   },
 ];
 

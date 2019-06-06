@@ -3,10 +3,11 @@ import {NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import {AppRoutingModule} from './app-routing.module';
+import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 import {NgxSpinnerModule} from 'ngx-spinner';
 import {ModalModule} from 'ngx-bootstrap';
 import {SweetAlert2Module} from '@sweetalert2/ngx-sweetalert2';
+import {AppRoutingModule} from './app-routing.module';
 import {CoreModule} from './core/core.module';
 import {SharedModule} from './shared/shared.module';
 
@@ -14,7 +15,7 @@ import {AppComponent} from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,6 +23,7 @@ import {AppComponent} from './app.component';
     FormsModule,
     HttpClientModule,
     ModalModule.forRoot(),
+    NgxDatatableModule,
     NgxSpinnerModule,
     SweetAlert2Module.forRoot({
       buttonsStyling: false,
@@ -38,7 +40,7 @@ import {AppComponent} from './app.component';
     SharedModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
 }

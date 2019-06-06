@@ -5,6 +5,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {FormValidationModule} from './form-validation/form-validation.module';
 import {ModalModule} from 'ngx-bootstrap';
+import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 import {NgxSpinnerModule} from 'ngx-spinner';
 import {SweetAlert2Module} from '@sweetalert2/ngx-sweetalert2';
 import {CoreModule} from '../core/core.module';
@@ -14,7 +15,7 @@ import {FooterComponent, HeaderComponent} from './components/layout';
 import {AutoFocusFieldDirective} from './auto-focus-field/auto-focus-field.directive';
 import {SpinnerComponent} from './components/spinner/spinner.component';
 import {SwalAlertComponent} from './components/swal-alert/swal-alert.component';
-import {CategoryBookListComponent} from './components/category-book-list/category-book-list.component';
+import {CategoryBookComponent} from './components/category-book/category-book.component';
 import {CartListComponent} from './components/cart-list/cart-list.component';
 
 const Layout = [
@@ -29,7 +30,7 @@ const Layout = [
     AutoFocusFieldDirective,
     SpinnerComponent,
     SwalAlertComponent,
-    CategoryBookListComponent,
+    CategoryBookComponent,
     CartListComponent,
   ],
   imports: [
@@ -40,6 +41,7 @@ const Layout = [
     HttpClientModule,
     RouterModule,
     ModalModule,
+    NgxDatatableModule,
     NgxSpinnerModule,
     SweetAlert2Module,
     CoreModule,
@@ -51,14 +53,15 @@ const Layout = [
     ReactiveFormsModule,
     HttpClientModule,
     ModalModule,
+    NgxDatatableModule,
     NgxSpinnerModule,
     SweetAlert2Module,
     SpinnerComponent,
     SwalAlertComponent,
-    CategoryBookListComponent,
-    CartListComponent
+    CategoryBookComponent,
+    CartListComponent,
   ],
-  providers: []
+  providers: [],
 })
 export class SharedModule {
 }

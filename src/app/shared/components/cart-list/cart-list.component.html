@@ -1,3 +1,38 @@
-<p>
-  cart-list works!
-</p>
+<div class="container px-5">
+  <div class="content">
+    <div class="row py-2 content-detail" *ngFor="let item of cartListData; let item = index">
+      <div class="col-md-2">
+        <button class="btn btn-default btn-delete-cart" title="Delete Book" (click)="onSubmitDelete()">
+          <i class="fa fa-times"></i>
+        </button>
+        <div class="book-image">
+          <img [src]="item.imageUrl" class="rounded mx-auto d-block" alt="...">
+        </div>
+      </div>
+      <div class="col-md-10 pl-0">
+        <div class="book-info">
+          <a class="title d-block">{{item.title}}</a>
+          <div class="book-details">
+            <div class="row px-3 pb-3 justify-content-between">
+              <div>
+                <span class="price">
+                  <span class="price-currency">$</span>
+                  <span class="price-whole">{{item.price}}</span>
+                  <span class="price-fractional">00</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row p-3 justify-content-between">
+      <div>
+        <span>Total: <span class="price-total">$1.000</span></span>
+      </div>
+      <div>
+        <button class="btn btn-primary">Check Out</button>
+      </div>
+    </div>
+  </div>
+</div>

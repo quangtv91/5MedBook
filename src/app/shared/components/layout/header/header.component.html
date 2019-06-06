@@ -13,20 +13,20 @@
         </div>
       </form>
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+        <li class="nav-item dropdown category">
+          <a class="nav-link dropdown-toggle category" data-toggle="dropdown"
              aria-haspopup="true" aria-expanded="false">All Book
           </a>
           <div class="dropdown-menu dropdown-menu-right dropdown-default">
-            <app-category-book-list></app-category-book-list>
+            <app-category-book></app-category-book>
           </div>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown cart-list">
           <a class="nav-link dropdown-toggle cart-list" data-toggle="dropdown"
              aria-haspopup="true" aria-expanded="false">Cart <i class="fa fa-shopping-cart"></i><span
             class="badge badge-danger">2</span>
           </a>
-          <div class="dropdown-menu dropdown-menu-right dropdown-default">
+          <div class="dropdown-menu dropdown-menu-right dropdown-default pb-0">
             <app-cart-list></app-cart-list>
           </div>
         </li>

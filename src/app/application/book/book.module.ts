@@ -6,6 +6,7 @@ import {BookListComponent} from './book-list/book-list.component';
 import {BookDetailComponent} from './book-detail/book-detail.component';
 import {CheckoutListComponent} from './checkout-list/checkout-list.component';
 import {BookAuthorListComponent} from './book-author-list/book-author-list.component';
+import {CategoryBookListComponent} from './category-book-list/category-book-list.component';
 
 @NgModule({
   declarations: [
@@ -13,12 +14,13 @@ import {BookAuthorListComponent} from './book-author-list/book-author-list.compo
     BookDetailComponent,
     CheckoutListComponent,
     BookAuthorListComponent,
+    CategoryBookListComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
-    BookRoutingModule
-  ]
+    BookRoutingModule,
+  ],
 })
 export class BookModule {
 }

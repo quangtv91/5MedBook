@@ -47,5 +47,19 @@
   }
 }
 
+.nav-item.dropdown {
+  &.cart-list {
+    .dropdown-menu.show {
+      min-width: 500px;
+    }
+  }
+  &.category {
+    .dropdown-menu.show {
+      min-width: 250px;
+    }
+  }
+}
+
+
 
 
