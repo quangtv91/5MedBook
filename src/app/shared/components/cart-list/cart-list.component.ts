@@ -11,15 +11,15 @@ export class CartListComponent implements OnInit {
   cartListData = [
     {
       id: 1,
-      title: 'Dac nhan tam',
+      title: 'How to Win Friends & Influence People',
       price: '5',
       imageUrl: 'assets/images/book-demo.jpg',
     },
     {
       id: 2,
-      title: 'Dac nhan tam',
+      title: 'Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead',
       price: '5',
-      imageUrl: 'assets/images/book-demo.jpg',
+      imageUrl: 'assets/images/book-demo-1.jpg',
     },
   ];
 

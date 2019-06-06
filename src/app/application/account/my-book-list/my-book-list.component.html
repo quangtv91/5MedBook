@@ -21,8 +21,8 @@
   <div class="content pt-3">
     <div class="row py-2 content-detail" *ngFor="let item of myBookListData; let item = index">
       <div class="col-md-2">
-        <button class="btn btn-default btn-delete-cart" title="Delete Book" (click)="onDelete()"><i
-          class="fa fa-times"></i></button>
+        <!--<button class="btn btn-default btn-delete-cart" title="Delete Book" (click)="onDelete()"><i-->
+          <!--class="fa fa-times"></i></button>-->
         <div class="book-image">
           <img [src]="item.imageUrl" class="rounded mx-auto d-block" alt="...">
         </div>
@@ -38,7 +38,7 @@
                 <button class="btn btn-primary mr-3">Download</button>
               </div>
               <div>
-                <span class="type mr-5">{{item.type}}</span>
+                <span class="extension mr-5">{{item.extension}}</span>
                 <span class="size mr-5">{{item.size}}</span>
                 <span class="year">Year: {{item.year}}</span>
               </div>

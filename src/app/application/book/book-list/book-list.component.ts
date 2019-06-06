@@ -7,10 +7,12 @@ import {Component, OnInit} from '@angular/core';
 })
 export class BookListComponent implements OnInit {
 
+  showBookList: Boolean = false;
+
   bookListData = [
     {
       id: 1,
-      title: 'Dac nhan tam',
+      title: 'How to Win Friends & Influence People',
       author: 'Dale Carnegie',
       price: '5',
       downloads: '1500',
@@ -19,21 +21,21 @@ export class BookListComponent implements OnInit {
     },
     {
       id: 2,
-      title: 'Dac nhan tam',
-      author: 'Dale Carnegie',
+      title: 'The Pioneers: The Heroic Story of the Settlers Who Brought the American Ideal West ',
+      author: 'David McCullough',
       price: '5',
-      downloads: '1500',
+      downloads: '1900',
       year: '2019',
-      imageUrl: 'assets/images/book-demo.jpg'
+      imageUrl: 'assets/images/book-demo-2.jpg'
     },
     {
       id: 3,
-      title: 'Dac nhan tam',
-      author: 'Dale Carnegie',
+      title: 'Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead',
+      author: 'Brené Brown',
       price: '5',
       downloads: '1500',
       year: '2019',
-      imageUrl: 'assets/images/book-demo.jpg'
+      imageUrl: 'assets/images/book-demo-1.jpg'
     }
   ];
 
@@ -41,6 +43,10 @@ export class BookListComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  onShowBookList() {
+    this.showBookList = !this.showBookList;
   }
 
 }

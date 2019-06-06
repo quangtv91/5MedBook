@@ -1,0 +1,379 @@
+$body-bg: #c1bdba;
+$form-bg: #13232f;
+$white: #ffffff;
+
+$main: linear-gradient(to right, #0030b8 0%, #0030b89e 100%);
+
+$gray-light: #a0b3b0;
+$gray: #ddd;
+
+$thin: 300;
+$normal: 400;
+$bold: 600;
+$br: 4px;
+$mainColor: #0030B8;
+
+$logoTextColor: #0030B8;
+$textColor: rgba(0, 0, 0, 0.5);
+
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+body.login {
+  background: #625F59 url(/assets/images/login_bg.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+}
+
+.bg-light {
+  background: linear-gradient(to right, #0030b8 0%, #0030b89e 100%);
+  height: 42px;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+h5 {
+  font-weight: 600;
+}
+
+.fa-times {
+  color: #dc3545;
+}
+
+// btn styles
+.btn {
+  &.btn-primary {
+    text-transform: uppercase;
+    color: $mainColor;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 4px 16px;
+    font-size: 14px;
+    font-weight: bold;
+
+    &:hover {
+      box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+    }
+
+    &.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+      color: $mainColor;
+      background-color: transparent;
+    }
+  }
+
+  &.btn-cart {
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #61D8CA;
+
+    &:hover {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+  }
+
+  &.btn-cart-bg {
+    background-color: #61D8CA;
+    border-radius: 50%;
+
+    &:hover {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+  }
+
+  &.btn-secondary {
+    color: #212529;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 4px 16px;
+    font-size: 14px;
+    font-weight: bold;
+
+    &:hover {
+      box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.13);
+    }
+
+    &.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
+      color: #212529;
+      background-color: transparent;
+    }
+  }
+
+  &.btn-danger {
+    color: #dc3545;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 4px 16px;
+    font-size: 14px;
+    font-weight: bold;
+
+    &:hover {
+      box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+    }
+
+    &.btn-danger:not(:disabled):not(.disabled):active, .btn-danger:not(:disabled):not(.disabled).active, .show > .btn-danger.dropdown-toggle {
+      color: #dc3545;
+      background-color: transparent;
+    }
+  }
+}
+
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  font-size: 2rem;
+  font-weight: $bold;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: $main;
+  color: $white;
+  transition: all .5s ease;
+  -webkit-appearance: none;
+
+  &:hover, &:focus {
+    color: $white;
+  }
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+.badge {
+  &.badge-danger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fa3e3e;
+  }
+
+  &.badge-page {
+    font-size: inherit;
+    padding: 15px;
+    color: #212529;
+    width: 100%;
+    text-align: left;
+    margin: 15px 0;
+  }
+}
+
+// form-validate styles
+.form-control {
+  border-radius: 0rem;
+}
+
+label.required {
+  &:after {
+    content: " *";
+    color: #dc3545;
+  }
+}
+
+.invalid-control {
+  input:not(.ag-floating-filter-input), .trigger-field, select {
+    border-color: #dc3545;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .error-messages {
+    & > div {
+      color: #dc3545;
+      bottom: -10px;
+      padding: 0;
+    }
+  }
+}
+
+// page styles
+.search {
+  .logo {
+    color: $mainColor;
+    padding-top: 15px;
+    margin-left: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  .slogan {
+    color: $textColor;
+  }
+
+  .input-group {
+    position: relative;
+
+    .input-icon {
+      position: absolute;
+      top: -5px;
+      right: 10px;
+      z-index: 9;
+      color: $textColor;
+      cursor: pointer;
+
+      :hover {
+        color: $mainColor;
+      }
+
+      .fa {
+        font-size: 26px;
+      }
+    }
+
+    input {
+      border-top: 0;
+      border-right: 0;
+      border-left: 0;
+      border-top-color: white;
+      box-shadow: none;
+      border-bottom: 3px solid #CCCCCC;
+    }
+  }
+}
+
+.content {
+  .content-detail {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .content-preview {
+    .book-info {
+      .title {
+        font-size: large;
+      }
+
+      .downloads {
+        color: #B4B4B4;
+      }
+    }
+  }
+
+  .content-book-detail {
+    .price-whole {
+      font-size: 32px;
+      line-height: 32px;
+      color: #404040;
+    }
+
+    .price-currency, .price-fractional {
+      font-size: 14px;
+      color: #545454;
+      top: auto;
+      vertical-align: top;
+    }
+
+    .name {
+      color: #8A8A8A;
+      font-weight: 600;
+    }
+
+    .detail, .downloads {
+      color: #B4B4B4;
+    }
+  }
+
+  .book-image {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .book-info {
+    .title {
+      color: #212529;
+      font-size: larger;
+      font-weight: 600;
+    }
+
+    .author {
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .title, .author {
+      &:hover {
+        color: $mainColor;
+        text-decoration: none;
+      }
+    }
+
+    .author, .extension, .size, .downloads, .year {
+      color: #4E4E4E;
+    }
+
+    .date-order {
+      color: #9B9B9B;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .detail {
+      color: #A6A6A6;
+    }
+
+    .price-whole {
+      font-size: 21px;
+      line-height: 21px;
+      color: #404040;
+    }
+
+    .price-currency, .price-fractional {
+      font-size: 12px;
+      color: #545454;
+      top: auto;
+      vertical-align: top;
+    }
+  }
+}
+
+.category-name {
+  color: #A5A5A5;
+}
+
+.book-detail {
+  color: $mainColor;
+}
+
+.modal-confirm {
+  .fa-question-circle {
+    font-size: x-large;
+    vertical-align: middle;
+    padding: 0 5px 0 15px;
+  }
+
+  .fa-times {
+    color: #212529;
+  }
+}
+
+.ngx-datatable.material .datatable-body .datatable-body-row .datatable-body-cell {
+  cursor: pointer;
+}

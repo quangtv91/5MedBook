@@ -13,23 +13,23 @@ export class MyBookListComponent implements OnInit {
   myBookListData = [
     {
       id: 1,
-      title: 'Dac nhan tam',
+      title: 'How to Win Friends & Influence People',
       author: 'Dale Carnegie',
       dateOrder: 'June 6, 2019',
-      type: 'PDF',
+      extension: 'PDF',
       size: '15M',
       year: '2019',
       imageUrl: 'assets/images/book-demo.jpg'
     },
     {
       id: 2,
-      title: 'Dac nhan tam',
-      author: 'Dale Carnegie',
+      title: 'Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead',
+      author: 'Brené Brown',
       dateOrder: 'June 6, 2019',
-      type: 'PDF',
+      extension: 'PDF',
       size: '23M',
       year: '2019',
-      imageUrl: 'assets/images/book-demo.jpg'
+      imageUrl: 'assets/images/book-demo-1.jpg'
     },
   ];
 

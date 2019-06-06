@@ -23,12 +23,12 @@
     <div class="row py-2 content-detail" *ngFor="let item of bookListData; let item = index">
       <div class="col-md-2">
         <div class="book-image">
-          <img [src]="item.imageUrl" class="rounded mx-auto d-block" alt="...">
+          <a routerLink="/book-detail/1"><img [src]="item.imageUrl" class="rounded mx-auto d-block" alt="..."></a>
         </div>
       </div>
       <div class="col-md-10">
         <div class="book-info">
-          <a class="title d-block">{{item.title}}</a>
+          <a class="title d-block" routerLink="/book-detail/1">{{item.title}}</a>
           <a class="author d-block" routerLink="/author">{{item.author}}</a>
           <div class="book-details pt-3">
             <div class="row px-3 pb-3 justify-content-between">
@@ -51,6 +51,48 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="" *ngIf="showBookList">
+      <div class="row py-2 content-detail" *ngFor="let item of bookListData; let item = index">
+        <div class="col-md-2">
+          <div class="book-image">
+            <a routerLink="/book-detail/1"><img [src]="item.imageUrl" class="rounded mx-auto d-block" alt="..."></a>
+          </div>
+        </div>
+        <div class="col-md-10">
+          <div class="book-info">
+            <a class="title d-block" routerLink="/book-detail/1">{{item.title}}</a>
+            <a class="author d-block" routerLink="/author">{{item.author}}</a>
+            <div class="book-details pt-3">
+              <div class="row px-3 pb-3 justify-content-between">
+                <div>
+                <span class="price">
+                  <span class="price-currency">$</span>
+                  <span class="price-whole">{{item.price}}</span>
+                  <span class="price-fractional">00</span>
+                </span>
+                  <button class="btn btn-primary mx-3">Get this book</button>
+                  <button class="btn btn-default btn-cart">
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+                </div>
+                <div>
+                  <span class="downloads mr-5">{{item.downloads}} Downloads</span>
+                  <span class="year">Year: {{item.year}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pt-3">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <button type="submit" class="btn btn-primary d-block w-100" (click)="onShowBookList()">See More Books
+        </button>
+      </div>
+      <div class="col-md-2"></div>
     </div>
   </div>
 </div>
