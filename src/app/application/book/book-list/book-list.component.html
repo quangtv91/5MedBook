@@ -9,7 +9,9 @@
       <div class="col-md-8">
         <form class="form-inline d-block pt-4 text-center">
           <div class="input-group">
-            <span class="input-icon search"><i class="fa fa-search"></i></span>
+            <span class="input-icon search">
+              <i class="fa fa-search"></i>
+            </span>
             <input type="text" class="form-control" placeholder="Search for Title/Author/ISBN...">
           </div>
         </form>
@@ -31,9 +33,15 @@
           <div class="book-details pt-3">
             <div class="row px-3 pb-3 justify-content-between">
               <div>
-                <span class="price">${{item.price}}</span>
+                <span class="price">
+                  <span class="price-currency">$</span>
+                  <span class="price-whole">{{item.price}}</span>
+                  <span class="price-fractional">00</span>
+                </span>
                 <button class="btn btn-primary mx-3">Get this book</button>
-                <button class="btn btn-default btn-cart"><i class="fa fa-shopping-cart"></i></button>
+                <button class="btn btn-default btn-cart">
+                  <i class="fa fa-shopping-cart"></i>
+                </button>
               </div>
               <div>
                 <span class="downloads mr-5">{{item.downloads}} Downloads</span>

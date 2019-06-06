@@ -12,7 +12,7 @@ export class BookListComponent implements OnInit {
       id: 1,
       title: 'Dac nhan tam',
       author: 'Dale Carnegie',
-      price: '500',
+      price: '5',
       downloads: '1500',
       year: '2019',
       imageUrl: 'assets/images/book-demo.jpg'
@@ -21,7 +21,7 @@ export class BookListComponent implements OnInit {
       id: 2,
       title: 'Dac nhan tam',
       author: 'Dale Carnegie',
-      price: '500',
+      price: '5',
       downloads: '1500',
       year: '2019',
       imageUrl: 'assets/images/book-demo.jpg'
@@ -30,7 +30,7 @@ export class BookListComponent implements OnInit {
       id: 3,
       title: 'Dac nhan tam',
       author: 'Dale Carnegie',
-      price: '500',
+      price: '5',
       downloads: '1500',
       year: '2019',
       imageUrl: 'assets/images/book-demo.jpg'
