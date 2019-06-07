@@ -137,27 +137,32 @@
               <div class="col-md-11">
                 <form [formGroup]="form" *ngIf="form" class="form-horizontal" novalidate autocomplete="off">
                   <textarea class="form-control w-100" type="text" [rows]="5" formControlName="reviewData"></textarea>
-                  <div class="form-group row mt-3">
-                    <div class="col" hasError="name">
-                      <input type="text" class="form-control" formControlName="name" placeholder="Your name">
-                      <div class="error-messages" errorMessage>
-                        <div *ifError="'required'">Name is required</div>
-                      </div>
-                    </div>
-                    <div class="col" hasError="email">
-                      <input type="text" class="form-control" formControlName="email" placeholder="Your email">
-                      <div class="error-messages" errorMessage>
-                        <div *ifError="'required'">Email is required</div>
-                        <div *ifError="'emailFormat'">Email not valid</div>
+                  <div class="row justify-content-between">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-9">
+                      <div class="form-group row mt-3">
+                        <div class="col" hasError="name">
+                          <input type="text" class="form-control" formControlName="name" placeholder="Your name">
+                          <div class="error-messages" errorMessage>
+                            <div *ifError="'required'">Please enter your name</div>
+                          </div>
+                        </div>
+                        <div class="col" hasError="email">
+                          <input type="text" class="form-control" formControlName="email" placeholder="Your email">
+                          <div class="error-messages" errorMessage>
+                            <div *ifError="'required'">Please enter your email</div>
+                            <div *ifError="'emailFormat'">Email address in format yourname@example.com</div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <button class="btn btn-primary my-3" type="submit" (click)="onSubmit()">Submit</button>
                 </form>
-                <div class="rating">
+                <div class="rating-submit">
                   Your Rating:
                   <rating [(ngModel)]="rateSubmit" [max]="max" [readonly]="isReadonly"></rating>
                 </div>
-                <button class="btn btn-primary my-3" type="submit" (click)="onSubmit()">Submit</button>
               </div>
             </div>
           </div>

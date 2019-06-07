@@ -94,6 +94,9 @@ export class BookDetailComponent implements OnInit {
   }
 
   onSubmit() {
+    if (this.form.invalid) {
+      return;
+    }
     console.log(this.rateSubmit);
     console.log(this.form.value);
   }
