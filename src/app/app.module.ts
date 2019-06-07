@@ -5,7 +5,7 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 import {NgxSpinnerModule} from 'ngx-spinner';
-import {ModalModule} from 'ngx-bootstrap';
+import {ModalModule, RatingModule} from 'ngx-bootstrap';
 import {SweetAlert2Module} from '@sweetalert2/ngx-sweetalert2';
 import {AppRoutingModule} from './app-routing.module';
 import {CoreModule} from './core/core.module';
@@ -23,6 +23,7 @@ import {AppComponent} from './app.component';
     FormsModule,
     HttpClientModule,
     ModalModule.forRoot(),
+    RatingModule.forRoot(),
     NgxDatatableModule,
     NgxSpinnerModule,
     SweetAlert2Module.forRoot({

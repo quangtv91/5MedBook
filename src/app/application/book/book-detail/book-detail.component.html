@@ -1,9 +1,10 @@
-<div class="container">
-  <span class="badge badge-light badge-page"><span class="category-name">Success Self-Help</span><i
-    class="fa fa-chevron-right px-2"></i><span class="book-detail">How to Win Friends & Influence People</span>
+<div class="container" *ngFor="let item of bookDetailData; let item = index">
+  <span class="badge badge-light badge-page"><a class="category-name"
+                                                routerLink="/category-list">{{item.categoryName}}</a><i
+    class="fa fa-chevron-right px-2"></i><span class="book-detail">{{item.title}}</span>
   </span>
   <div class="content">
-    <div class="row" *ngFor="let item of bookDetailData; let item = index">
+    <div class="row">
       <div class="col-md-10 content-preview">
         <div class="book-info">
           <a class="title d-block">{{item.title}}</a>
@@ -21,16 +22,45 @@
             <span class="d-block mb-3 ">{{item.downloads}} Downloads</span>
           </div>
         </div>
+        <div class="book-review mb-4" *ngFor="let itemReview of bookDetailReviewData; let itemReview = index">
+          <div class="row">
+            <div class="col-md-1 book-image">
+              <img [src]="itemReview.imageUserReviewUrl" class="rounded mx-auto d-block" alt="...">
+            </div>
+            <div class="col-md-11">
+              <span class="user-name">{{itemReview.userName}}</span>
+              <div class="rating">
+                <rating [(ngModel)]="rate" [max]="max" [readonly]="true"></rating>
+              </div>
+              <span>{{itemReview.content}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="book-review-submit">
+          <div class="row">
+            <div class="col-md-1 book-image">
+              <img [src]="item.imageUserUrl" class="rounded mx-auto d-block" alt="...">
+            </div>
+            <div class="col-md-11">
+              <form [formGroup]="form" *ngIf="form" novalidate autocomplete="off">
+                <textarea class="w-100" type="text" [rows]="6" formControlName="reviewData"></textarea>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-md-2 content-book-detail">
         <div class="book-image text-center">
-          <img [src]="item.imageUrl" class="rounded mx-auto d-block mb-3" alt="...">
+          <img [src]="item.imageUrl" class="rounded mx-auto d-block" alt="...">
+          <div class="rating">
+            <rating [(ngModel)]="rate" [max]="max" [readonly]="true"></rating>
+          </div>
           <div>
-                <span class="price">
-                  <span class="price-currency">$</span>
-                  <span class="price-whole">{{item.price}}</span>
-                  <span class="price-fractional">00</span>
-                </span>
+            <span class="price">
+              <span class="price-currency">$</span>
+              <span class="price-whole">{{item.price}}</span>
+              <span class="price-fractional">00</span>
+            </span>
             <button class="btn btn-primary my-3">Get This Book</button>
             <!--<button class="btn btn-primary mr-3">Add To Cart</button>-->
             <span class="d-block mb-3 downloads">{{item.downloads}} Downloads</span>

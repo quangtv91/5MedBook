@@ -273,6 +273,15 @@ label.required {
         color: #B4B4B4;
       }
     }
+
+    .book-review {
+      color: #A7A7A7;
+      .user-name {
+        color: #929292;
+        font-weight: 600;
+        font-size: larger;
+      }
+    }
   }
 
   .content-book-detail {
@@ -376,4 +385,16 @@ label.required {
 
 .ngx-datatable.material .datatable-body .datatable-body-row .datatable-body-cell {
   cursor: pointer;
+}
+
+// rating
+.ng-untouched.ng-valid.ng-dirty, .ng-untouched.ng-pristine.ng-valid {
+  :focus {
+    outline: 0 !important;
+  }
+}
+
+.bs-rating-star {
+  color: #FFC85A;
+  font-size: 24px;
 }

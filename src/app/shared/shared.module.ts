@@ -4,7 +4,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {FormValidationModule} from './form-validation/form-validation.module';
-import {ModalModule} from 'ngx-bootstrap';
+import {ModalModule, RatingModule} from 'ngx-bootstrap';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 import {NgxSpinnerModule} from 'ngx-spinner';
 import {SweetAlert2Module} from '@sweetalert2/ngx-sweetalert2';
@@ -41,6 +41,7 @@ const Layout = [
     HttpClientModule,
     RouterModule,
     ModalModule,
+    RatingModule,
     NgxDatatableModule,
     NgxSpinnerModule,
     SweetAlert2Module,
@@ -53,6 +54,7 @@ const Layout = [
     ReactiveFormsModule,
     HttpClientModule,
     ModalModule,
+    RatingModule,
     NgxDatatableModule,
     NgxSpinnerModule,
     SweetAlert2Module,
