@@ -13,6 +13,7 @@ export class BookDetailComponent implements OnInit {
   showDetailBookData: Boolean = false;
   max: Number = 5;
   rate: Number = 5;
+  rateSubmit;
   isReadonly: Boolean = false;
 
   bookDetailData = [
@@ -83,13 +84,18 @@ export class BookDetailComponent implements OnInit {
   private buildForm() {
     this.form = this.formBuilder.group({
       reviewData: [''],
-      email: ['', Validators.compose([Validators.required, GlobalValidator.emailFormat])],
       name: ['', Validators.required],
+      email: ['', Validators.compose([Validators.required, GlobalValidator.emailFormat])],
     });
   }
 
   onShowDetailBookData() {
     this.showDetailBookData = !this.showDetailBookData;
+  }
+
+  onSubmit() {
+    console.log(this.rateSubmit);
+    console.log(this.form.value);
   }
 
 }

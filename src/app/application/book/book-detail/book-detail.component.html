@@ -4,132 +4,165 @@
     class="fa fa-chevron-right px-2"></i><span class="book-detail">{{item.title}}</span>
   </span>
   <div class="content">
-    <div class="row">
-      <div class="col-md-10 content-preview">
-        <div class="book-info">
-          <a class="title d-block">{{item.title}}</a>
-          <a class="author d-block pb-3" routerLink="/author">{{item.author}}</a>
-          <div class="book-image">
-            <img [src]="item.imageDetailUrl" class="rounded mx-auto d-block" alt="...">
-          </div>
-          <div class="detail mt-4">
-            <span class="d-block">{{item.detail}}</span>
-            <span *ngIf="showDetailBookData" class="d-block mt-3">{{item.detailBookData}}</span>
-            <button class="btn btn-link d-block pl-0" (click)="onShowDetailBookData()">Read more</button>
-          </div>
-          <button class="btn btn-primary w-100 my-3">Get This Book</button>
-          <div class="downloads text-center">
-            <span class="d-block mb-3 ">{{item.downloads}} Downloads</span>
+    <div class="content-book">
+      <div class="row">
+        <div class="col-md-10">
+          <div class="book-info">
+            <a class="title d-block">{{item.title}}</a>
+            <a class="author d-block pb-3" routerLink="/author">{{item.author}}</a>
+            <div class="book-image">
+              <img [src]="item.imageDetailUrl" class="rounded mx-auto d-block" alt="...">
+            </div>
+            <div class="detail mt-4">
+              <span class="d-block">{{item.detail}}</span>
+              <span *ngIf="showDetailBookData" class="d-block mt-3">{{item.detailBookData}}</span>
+              <button class="btn btn-link d-block pl-0" (click)="onShowDetailBookData()">Read more</button>
+            </div>
+            <button class="btn btn-primary w-100 my-3">Get This Book</button>
+            <div class="downloads text-center">
+              <span class="d-block mb-3 ">{{item.downloads}} Downloads</span>
+            </div>
           </div>
         </div>
-        <div class="book-review mb-4" *ngFor="let itemReview of bookDetailReviewData; let itemReview = index">
-          <div class="row">
-            <div class="col-md-1 book-image">
-              <img [src]="itemReview.imageUserReviewUrl" class="rounded mx-auto d-block" alt="...">
-            </div>
-            <div class="col-md-11">
-              <span class="user-name">{{itemReview.userName}}</span>
+        <div class="col-md-2">
+          <div class="content-book-detail">
+            <div class="book-image text-center">
+              <img [src]="item.imageUrl" class="rounded mx-auto d-block" alt="...">
               <div class="rating">
                 <rating [(ngModel)]="rate" [max]="max" [readonly]="true"></rating>
               </div>
-              <span>{{itemReview.content}}</span>
-            </div>
-          </div>
-        </div>
-        <div class="book-review-submit">
-          <div class="row">
-            <div class="col-md-1 book-image">
-              <img [src]="item.imageUserUrl" class="rounded mx-auto d-block" alt="...">
-            </div>
-            <div class="col-md-11">
-              <form [formGroup]="form" *ngIf="form" novalidate autocomplete="off">
-                <textarea class="w-100" type="text" [rows]="6" formControlName="reviewData"></textarea>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-2 content-book-detail">
-        <div class="book-image text-center">
-          <img [src]="item.imageUrl" class="rounded mx-auto d-block" alt="...">
-          <div class="rating">
-            <rating [(ngModel)]="rate" [max]="max" [readonly]="true"></rating>
-          </div>
-          <div>
+              <div>
             <span class="price">
               <span class="price-currency">$</span>
               <span class="price-whole">{{item.price}}</span>
               <span class="price-fractional">00</span>
             </span>
-            <button class="btn btn-primary my-3">Get This Book</button>
-            <!--<button class="btn btn-primary mr-3">Add To Cart</button>-->
-            <span class="d-block mb-3 downloads">{{item.downloads}} Downloads</span>
+                <button class="btn btn-primary my-3">Get This Book</button>
+                <!--<button class="btn btn-primary mr-3">Add To Cart</button>-->
+                <span class="d-block mb-3 downloads">{{item.downloads}} Downloads</span>
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-md-6 name">
+                <span>ISBN 10</span>
+              </div>
+              <div class="col-md-6 pl-xl-0">
+                <span class="detail">{{item.isbn10}}</span>
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-md-6 name">
+                <span>ISBN 13</span>
+              </div>
+              <div class="col-md-6 pl-xl-0">
+                <span class="detail">{{item.isbn13}}</span>
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-md-6 name">
+                <span>Year</span>
+              </div>
+              <div class="col-md-6 pl-xl-0">
+                <span class="detail">{{item.year}}</span>
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-md-6 name">
+                <span>Pages</span>
+              </div>
+              <div class="col-md-6 pl-xl-0">
+                <span class="detail">{{item.pages}}</span>
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-md-6 name">
+                <span>Edition</span>
+              </div>
+              <div class="col-md-6 pl-xl-0">
+                <span class="detail">{{item.edition}}</span>
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-md-6 name">
+                <span>Language</span>
+              </div>
+              <div class="col-md-6 pl-xl-0">
+                <span class="detail">{{item.language}}</span>
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-md-6 name">
+                <span>Extension</span>
+              </div>
+              <div class="col-md-6 pl-xl-0">
+                <span class="detail">{{item.extension}}</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 name">
+                <span>Size</span>
+              </div>
+              <div class="col-md-6 pl-xl-0">
+                <span class="detail">{{item.size}}</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="row mb-2">
-          <div class="col-md-6 name">
-            <span>ISBN 10</span>
+      </div>
+    </div>
+    <div class="content-preview">
+      <div class="row">
+        <div class="col-md-10">
+          <div class="book-review mb-4" *ngFor="let itemReview of bookDetailReviewData; let itemReview = index">
+            <div class="row">
+              <div class="col-md-1">
+                <div class="book-image">
+                  <img [src]="itemReview.imageUserReviewUrl" class="rounded mx-auto d-block" alt="...">
+                </div>
+              </div>
+              <div class="col-md-11">
+                <span class="user-name">{{itemReview.userName}}</span>
+                <div class="rating">
+                  <rating [(ngModel)]="rate" [max]="max" [readonly]="true"></rating>
+                </div>
+                <span>{{itemReview.content}}</span>
+              </div>
+            </div>
           </div>
-          <div class="col-md-6 pl-0 detail">
-            <span>{{item.isbn10}}</span>
-          </div>
-        </div>
-        <div class="row mb-2">
-          <div class="col-md-6 name">
-            <span>ISBN 13</span>
-          </div>
-          <div class="col-md-6 pl-0 detail">
-            <span>{{item.isbn13}}</span>
-          </div>
-        </div>
-        <div class="row mb-2">
-          <div class="col-md-6 name">
-            <span>Year</span>
-          </div>
-          <div class="col-md-6 pl-0 detail">
-            <span>{{item.year}}</span>
-          </div>
-        </div>
-        <div class="row mb-2">
-          <div class="col-md-6 name">
-            <span>Pages</span>
-          </div>
-          <div class="col-md-6 pl-0 detail">
-            <span>{{item.pages}}</span>
-          </div>
-        </div>
-        <div class="row mb-2">
-          <div class="col-md-6 name">
-            <span>Edition</span>
-          </div>
-          <div class="col-md-6 pl-0 detail">
-            <span>{{item.edition}}</span>
-          </div>
-        </div>
-        <div class="row mb-2">
-          <div class="col-md-6 name">
-            <span>Language</span>
-          </div>
-          <div class="col-md-6 pl-0 detail">
-            <span>{{item.language}}</span>
-          </div>
-        </div>
-        <div class="row mb-2">
-          <div class="col-md-6 name">
-            <span>Extension</span>
-          </div>
-          <div class="col-md-6 pl-0 detail">
-            <span>{{item.extension}}</span>
+          <div class="book-review-submit">
+            <div class="row">
+              <div class="col-md-1 book-image">
+                <img [src]="item.imageUserUrl" class="rounded mx-auto d-block" alt="...">
+              </div>
+              <div class="col-md-11">
+                <form [formGroup]="form" *ngIf="form" class="form-horizontal" novalidate autocomplete="off">
+                  <textarea class="form-control w-100" type="text" [rows]="5" formControlName="reviewData"></textarea>
+                  <div class="form-group row mt-3">
+                    <div class="col" hasError="name">
+                      <input type="text" class="form-control" formControlName="name" placeholder="Your name">
+                      <div class="error-messages" errorMessage>
+                        <div *ifError="'required'">Name is required</div>
+                      </div>
+                    </div>
+                    <div class="col" hasError="email">
+                      <input type="text" class="form-control" formControlName="email" placeholder="Your email">
+                      <div class="error-messages" errorMessage>
+                        <div *ifError="'required'">Email is required</div>
+                        <div *ifError="'emailFormat'">Email not valid</div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <div class="rating">
+                  Your Rating:
+                  <rating [(ngModel)]="rateSubmit" [max]="max" [readonly]="isReadonly"></rating>
+                </div>
+                <button class="btn btn-primary my-3" type="submit" (click)="onSubmit()">Submit</button>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6 name">
-            <span>Size</span>
-          </div>
-          <div class="col-md-6 pl-0 detail">
-            <span>{{item.size}}</span>
-          </div>
-        </div>
+        <div class="col-md-2"></div>
       </div>
     </div>
   </div>
