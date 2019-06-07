@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {GlobalValidator} from '../../../shared/form-validation/validators';
+import {BookDetailModel} from '../../../core/models/book/book.model';
 
 @Component({
   selector: 'app-book-detail',
@@ -16,19 +17,19 @@ export class BookDetailComponent implements OnInit {
   rateSubmit;
   isReadonly: Boolean = false;
 
-  bookDetailData = [
+  bookDetailData: BookDetailModel[] = [
     {
       id: 1,
       categoryName: 'Success Self-Help',
       title: 'How to Win Friends & Influence People',
       author: 'Dale Carnegie',
       price: '5',
-      downloads: '1500',
-      isbn10: '0070070077',
-      isbn13: '0070070077777',
-      year: '2019',
-      pages: '777',
-      edition: '19',
+      downloads: 1500,
+      isbn10: 7007007007,
+      isbn13: 7007007007007,
+      year: 2019,
+      pages: 777,
+      edition: 19,
       language: 'English',
       extension: 'PDF',
       size: '15M',
