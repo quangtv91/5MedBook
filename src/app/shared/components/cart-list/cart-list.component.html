@@ -1,6 +1,6 @@
 <div class="container px-5">
   <div class="content">
-    <div class="row py-2 content-detail" *ngFor="let item of cartListData; let item = index">
+    <div class="row py-3 content-detail" *ngFor="let item of cartListData; let item = index">
       <div class="col-md-2">
         <button class="btn btn-default btn-delete-cart" title="Delete Book" (click)="onSubmitDelete()">
           <i class="fa fa-times"></i>
@@ -11,7 +11,7 @@
       </div>
       <div class="col-md-10 pl-0">
         <div class="book-info">
-          <a class="title d-block">{{item.title}}</a>
+          <a class="title d-block" routerLink="/book-detail/1">{{item.title}}</a>
           <div class="book-details">
             <div class="row px-3 pb-3 justify-content-between">
               <div>

@@ -6,6 +6,10 @@ export interface BookModel {
   downloads: number;
   year: number;
   imageUrl: string;
+  dateOrder: string;
+  extension: string;
+  size: string;
+  detail: string;
 }
 
 export interface BookDetailModel {
@@ -27,5 +31,5 @@ export interface BookDetailModel {
   imageUrl: string;
   imageDetailUrl: string;
   detail: string;
-  detailBookData: string
+  detailBookData: string;
 }

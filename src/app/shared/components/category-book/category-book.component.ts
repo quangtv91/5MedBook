@@ -13,18 +13,22 @@ export class CategoryBookComponent implements OnInit {
   rows = [
     {
       id: 1,
-      name: 'Education & Teaching',
+      name: 'Self-Help',
     },
     {
       id: 2,
-      name: 'Engineering & Transportation',
+      name: 'Education & Teaching',
     },
     {
       id: 3,
-      name: 'Health, Fitness & Dieting',
+      name: 'Engineering & Transportation',
     },
     {
       id: 4,
+      name: 'Health, Fitness & Dieting',
+    },
+    {
+      id: 5,
       name: 'History',
     },
   ];

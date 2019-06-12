@@ -18,7 +18,18 @@ export class BookListComponent implements OnInit {
       price: '5',
       downloads: 1500,
       year: 2019,
-      imageUrl: 'assets/images/book-demo.jpg'
+      imageUrl: 'assets/images/book-demo.jpg',
+      dateOrder: '',
+      extension: '',
+      size: '',
+      detail: 'How to Win Friends and Influence People was first published in 1937\n' +
+        'in an edition of only five thousand copies. Neither Dale Carnegie nor\n' +
+        'the publishers, Simon and Schuster, anticipated more than this\n' +
+        'modest sale. To their amazement, the book became an overnight\n' +
+        'sensation, and edition after edition rolled off the presses to keep up\n' +
+        'with the increasing public demand. Now to Win Friends and\n' +
+        'InfEuence People took its place in publishing history as one of the\n' +
+        'all-time international best-sellers...',
     },
     {
       id: 2,
@@ -27,7 +38,13 @@ export class BookListComponent implements OnInit {
       price: '5',
       downloads: 1900,
       year: 2019,
-      imageUrl: 'assets/images/book-demo-2.jpg'
+      imageUrl: 'assets/images/book-demo-2.jpg',
+      dateOrder: '',
+      extension: '',
+      size: '',
+      detail: 'Pulitzer Prize–winning historian David McCullough rediscovers an important and dramatic chapter in the American story—the' +
+        ' settling of the Northwest Territory by dauntless pioneers who overcame incredible hardships to build a community based on ideals' +
+        ' that would come to define our country...'
     },
     {
       id: 3,
@@ -36,7 +53,13 @@ export class BookListComponent implements OnInit {
       price: '5',
       downloads: 1500,
       year: 2019,
-      imageUrl: 'assets/images/book-demo-1.jpg'
+      imageUrl: 'assets/images/book-demo-1.jpg',
+      dateOrder: '',
+      extension: '',
+      size: '',
+      detail: 'Every day we experience the uncertainty, risks, and emotional exposure that define what it means to be vulnerable or to dare' +
+        ' greatly. Based on 12 years of pioneering research, Dr. Brené Brown dispels the cultural myth that vulnerability is weakness and' +
+        ' argues that it is, in truth, our most accurate measure of courage...'
     }
   ];
 

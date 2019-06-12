@@ -1,3 +1,19 @@
-<p>
-  category-book-list works!
-</p>
+<div class="container">
+  <div class="owl-carousel-holder">
+    <div class="carousel-section">
+      <h2 class="badge badge-light badge-page">Books<i
+        class="fa fa-chevron-right px-2"></i>Self-Help</h2>
+      <owl-carousel [options]="myCarouselOptions">
+        <div class="item" *ngFor="let image of myCarouselImages;let i = index">
+          <div class="card">
+            <img src={{image.imageUrl}}/>
+            <div class="card-body px-2">
+              <span class="card-title d-block">{{image.title}}</span>
+              <span class="card-title d-block">{{image.author}}</span>
+            </div>
+          </div>
+        </div>
+      </owl-carousel>
+    </div>
+  </div>
+</div>

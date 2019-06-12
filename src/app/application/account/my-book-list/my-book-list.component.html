@@ -2,8 +2,8 @@
   <span class="badge badge-light badge-page">My Book</span>
   <div class="search">
     <!--<div class="text-center">-->
-    <!--<h1 class="logo">5MedBook</h1>-->
-    <!--<span class="slogan d-block">Search and get any book with only $5</span>-->
+      <!--<h1 class="logo">5MedBook</h1>-->
+      <!--<span class="slogan d-block">Search and get any book with only $5</span>-->
     <!--</div>-->
     <div class="row">
       <!--<div class="col-md-2"></div>-->
@@ -19,17 +19,17 @@
     </div>
   </div>
   <div class="content pt-3">
-    <div class="row py-2 content-detail" *ngFor="let item of myBookListData; let item = index">
+    <div class="row py-3 content-detail" *ngFor="let item of myBookListData; let item = index">
       <div class="col-md-2">
         <!--<button class="btn btn-default btn-delete-cart" title="Delete Book" (click)="onDelete()"><i-->
-          <!--class="fa fa-times"></i></button>-->
+        <!--class="fa fa-times"></i></button>-->
         <div class="book-image">
           <img [src]="item.imageUrl" class="rounded mx-auto d-block" alt="...">
         </div>
       </div>
       <div class="col-md-10">
         <div class="book-info">
-          <a class="title d-block">{{item.title}}</a>
+          <a class="title d-block" routerLink="/book-detail/1">{{item.title}}</a>
           <a class="author d-block" routerLink="/author">{{item.author}}</a>
           <div class="book-details pt-3">
             <div class="row px-3 pb-3 justify-content-between">
@@ -43,9 +43,10 @@
                 <span class="year">Year: {{item.year}}</span>
               </div>
             </div>
-          </div>
-          <div class="date-order">
-            <span class="d-block">Date Order {{item.dateOrder}}</span>
+            <div class="date-order">
+              <span class="d-block">Date Order {{item.dateOrder}}</span>
+            </div>
+            <span class="detail d-block mt-3">{{item.detail}}</span>
           </div>
         </div>
       </div>

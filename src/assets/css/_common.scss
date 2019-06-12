@@ -261,6 +261,10 @@ label.required {
 .content {
   .content-detail {
     border-bottom: 1px solid #dddddd;
+
+    &:hover {
+      box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    }
   }
 
   .content-preview {
@@ -276,6 +280,7 @@ label.required {
 
     .book-review {
       color: #A7A7A7;
+
       .user-name {
         color: #929292;
         font-weight: 600;
@@ -360,6 +365,12 @@ label.required {
       top: auto;
       vertical-align: top;
     }
+
+    .book-details {
+      .detail {
+        color: #333333;
+      }
+    }
   }
 }
 
@@ -397,4 +408,47 @@ label.required {
 .bs-rating-star {
   color: #FFC85A;
   font-size: 24px;
+}
+
+//owl-carousel styles
+.slider-image-section .owl-stage-outer, .slider-image-section .owl-stage, .slider-image-section .owl-item, .slider-image-section .owl-item .item, .slider-image-section .owl-item .item img {
+  height: 480px;
+}
+
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.owl-nav button {
+  position: absolute;
+  outline: none;
+}
+
+.owl-prev {
+  left: 20px;
+}
+
+.owl-prev.disabled span {
+  color: #a78c8cbd;
+}
+
+.owl-next {
+  right: 20px;
+}
+
+.owl-next.disabled span {
+  color: #a78c8cbd;
+}
+
+.owl-nav button span {
+  line-height: 0px;
+  /* color: #fff; */
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.card-title {
+  font-size: 13px
 }

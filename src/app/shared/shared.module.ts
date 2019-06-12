@@ -4,7 +4,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {FormValidationModule} from './form-validation/form-validation.module';
-import {ModalModule, RatingModule} from 'ngx-bootstrap';
+import {CarouselModule, ModalModule, RatingModule} from 'ngx-bootstrap';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 import {NgxSpinnerModule} from 'ngx-spinner';
 import {SweetAlert2Module} from '@sweetalert2/ngx-sweetalert2';
@@ -17,6 +17,7 @@ import {SpinnerComponent} from './components/spinner/spinner.component';
 import {SwalAlertComponent} from './components/swal-alert/swal-alert.component';
 import {CategoryBookComponent} from './components/category-book/category-book.component';
 import {CartListComponent} from './components/cart-list/cart-list.component';
+import {OwlModule} from 'ngx-owl-carousel';
 
 const Layout = [
   HomeComponent,
@@ -42,10 +43,12 @@ const Layout = [
     RouterModule,
     ModalModule,
     RatingModule,
+    CarouselModule,
     NgxDatatableModule,
     NgxSpinnerModule,
     SweetAlert2Module,
     CoreModule,
+    OwlModule
   ],
   exports: [
     CommonModule,
@@ -55,9 +58,11 @@ const Layout = [
     HttpClientModule,
     ModalModule,
     RatingModule,
+    CarouselModule,
     NgxDatatableModule,
     NgxSpinnerModule,
     SweetAlert2Module,
+    OwlModule,
     SpinnerComponent,
     SwalAlertComponent,
     CategoryBookComponent,

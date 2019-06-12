@@ -20,7 +20,7 @@
     </div>
   </div>
   <div class="content pt-3">
-    <div class="row py-2 content-detail" *ngFor="let item of bookListData; let item = index">
+    <div class="row py-3 content-detail" *ngFor="let item of bookListData; let item = index">
       <div class="col-md-2">
         <div class="book-image">
           <a routerLink="/book-detail/1"><img [src]="item.imageUrl" class="rounded mx-auto d-block" alt="..."></a>
@@ -48,12 +48,13 @@
                 <span class="year">Year: {{item.year}}</span>
               </div>
             </div>
+            <span class="detail d-block">{{item.detail}}</span>
           </div>
         </div>
       </div>
     </div>
     <div class="" *ngIf="showBookList">
-      <div class="row py-2 content-detail" *ngFor="let item of bookListData; let item = index">
+      <div class="row py-3 content-detail" *ngFor="let item of bookListData; let item = index">
         <div class="col-md-2">
           <div class="book-image">
             <a routerLink="/book-detail/1"><img [src]="item.imageUrl" class="rounded mx-auto d-block" alt="..."></a>
@@ -81,6 +82,7 @@
                   <span class="year">Year: {{item.year}}</span>
                 </div>
               </div>
+              <span class="detail d-block">{{item.detail}}</span>
             </div>
           </div>
         </div>
