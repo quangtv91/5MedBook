@@ -6,7 +6,7 @@ import {BookDetailModel} from '../../../core/models/book/book.model';
 @Component({
   selector: 'app-book-detail',
   templateUrl: './book-detail.component.html',
-  styleUrls: ['./book-detail.component.scss'],
+  styleUrls: ['./book-detail.component.scss']
 })
 export class BookDetailComponent implements OnInit {
 
@@ -52,8 +52,8 @@ export class BookDetailComponent implements OnInit {
         'parodied, used in innumerable contexts from political cartoon to\n' +
         'novels. The book itself was translated into almost every known\n' +
         'written language. Each generation has discovered it anew and has\n' +
-        'found it relevant.',
-    },
+        'found it relevant.'
+    }
   ];
 
   bookDetailReviewData = [
@@ -62,19 +62,19 @@ export class BookDetailComponent implements OnInit {
       userName: 'Trevor Miller',
       imageUserReviewUrl: 'assets/images/app-user.png',
       content: 'I\'ve been learning things all along, but I never learned how to actually apply the things I had learned until now. ' +
-        'This book speaks my language and if your background sounds even remotely similar I have a feeling that you\'ll agree.',
+        'This book speaks my language and if your background sounds even remotely similar I have a feeling that you\'ll agree.'
     },
     {
       id: 2,
       userName: 'Krystine',
       imageUserReviewUrl: 'assets/images/app-user.png',
       content: 'If you\'re having troubles in life and simply can\'t figure out what you\'re doing wrong, this is a fantastic place to start. ' +
-        'Good luck on your journey!',
-    },
+        'Good luck on your journey!'
+    }
   ];
 
   constructor(
-    private formBuilder: FormBuilder,
+    private formBuilder: FormBuilder
   ) {
   }
 
@@ -86,7 +86,7 @@ export class BookDetailComponent implements OnInit {
     this.form = this.formBuilder.group({
       reviewData: [''],
       name: ['', Validators.required],
-      email: ['', Validators.compose([Validators.required, GlobalValidator.emailFormat])],
+      email: ['', Validators.compose([Validators.required, GlobalValidator.emailFormat])]
     });
   }
 

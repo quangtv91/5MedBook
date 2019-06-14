@@ -5,7 +5,7 @@
 
 .carousel-section {
   width: 100%;
-  height: 400px;
+  //height: 400px;
   float: left;
 }
 
@@ -15,11 +15,37 @@
   float: left;
 }
 
-.card {
-  width: auto;
-}
 
 .item {
-  padding: 0 6px
+  padding: 0 6px;
+
+  .card {
+    width: auto;
+
+    .card-title {
+      font-weight: 600;
+      cursor: pointer;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .card-author {
+      font-style: italic;
+      cursor: pointer;
+
+    }
+
+    .card-title, .card-author {
+      &:hover {
+        color: #0030B8;
+        text-decoration: underline;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
 }
 

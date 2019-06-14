@@ -14,6 +14,7 @@ export class MyBookListComponent implements OnInit {
   myBookListData: BookModel[] = [
     {
       id: 1,
+      category: '',
       title: 'How to Win Friends & Influence People',
       author: 'Dale Carnegie',
       dateOrder: 'June 6, 2019',
@@ -27,9 +28,11 @@ export class MyBookListComponent implements OnInit {
         ' Friends and InfEuence People took its place in publishing history as one of the all-time international best-sellers...',
       price: '',
       downloads: null,
+      rate: 5
     },
     {
       id: 2,
+      category: '',
       title: 'Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead',
       author: 'Brené Brown',
       dateOrder: 'June 6, 2019',
@@ -42,7 +45,8 @@ export class MyBookListComponent implements OnInit {
         ' argues that it is, in truth, our most accurate measure of courage...',
       price: '',
       downloads: null,
-    },
+      rate: 5
+    }
   ];
 
   constructor(

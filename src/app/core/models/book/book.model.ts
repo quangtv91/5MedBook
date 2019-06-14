@@ -1,5 +1,6 @@
 export interface BookModel {
   id?;
+  category: string;
   title: string;
   author: string;
   price: string;
@@ -10,6 +11,7 @@ export interface BookModel {
   extension: string;
   size: string;
   detail: string;
+  rate: number;
 }
 
 export interface BookDetailModel {

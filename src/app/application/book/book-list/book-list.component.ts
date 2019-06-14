@@ -13,6 +13,7 @@ export class BookListComponent implements OnInit {
   bookListData: BookModel[] = [
     {
       id: 1,
+      category: '',
       title: 'How to Win Friends & Influence People',
       author: 'Dale Carnegie',
       price: '5',
@@ -30,9 +31,11 @@ export class BookListComponent implements OnInit {
         'with the increasing public demand. Now to Win Friends and\n' +
         'InfEuence People took its place in publishing history as one of the\n' +
         'all-time international best-sellers...',
+      rate: 5
     },
     {
       id: 2,
+      category: '',
       title: 'The Pioneers: The Heroic Story of the Settlers Who Brought the American Ideal West ',
       author: 'David McCullough',
       price: '5',
@@ -44,10 +47,12 @@ export class BookListComponent implements OnInit {
       size: '',
       detail: 'Pulitzer Prize–winning historian David McCullough rediscovers an important and dramatic chapter in the American story—the' +
         ' settling of the Northwest Territory by dauntless pioneers who overcame incredible hardships to build a community based on ideals' +
-        ' that would come to define our country...'
+        ' that would come to define our country...',
+      rate: 5
     },
     {
       id: 3,
+      category: '',
       title: 'Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead',
       author: 'Brené Brown',
       price: '5',
@@ -59,7 +64,8 @@ export class BookListComponent implements OnInit {
       size: '',
       detail: 'Every day we experience the uncertainty, risks, and emotional exposure that define what it means to be vulnerable or to dare' +
         ' greatly. Based on 12 years of pioneering research, Dr. Brené Brown dispels the cultural myth that vulnerability is weakness and' +
-        ' argues that it is, in truth, our most accurate measure of courage...'
+        ' argues that it is, in truth, our most accurate measure of courage...',
+      rate: 5
     }
   ];
 
