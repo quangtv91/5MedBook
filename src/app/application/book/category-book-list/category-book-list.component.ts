@@ -11,6 +11,7 @@ export class CategoryBookListComponent implements OnInit {
   category;
   max: Number = 5;
   rate: Number = 5;
+  showBookList = false;
   myCarouselImages = [
     {
       id: 1,
@@ -31,52 +32,58 @@ export class CategoryBookListComponent implements OnInit {
       imageUrl: 'assets/images/book-demo-2.jpg'
     },
     {
-      id: 1,
+      id: 4,
       title: 'How to Win Friends & Influence People',
       author: 'Dale Carnegie',
       imageUrl: 'assets/images/book-demo.jpg'
     },
     {
-      id: 2,
+      id: 5,
       title: 'The Pioneers: The Heroic Story of the Settlers Who Brought the American Ideal West ',
       author: 'David McCullough',
       imageUrl: 'assets/images/book-demo-1.jpg'
     },
     {
-      id: 3,
+      id: 6,
       title: 'Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead',
       author: 'Brené Brown',
       imageUrl: 'assets/images/book-demo-2.jpg'
     },
     {
-      id: 1,
+      id: 7,
       title: 'How to Win Friends & Influence People',
       author: 'Dale Carnegie',
       imageUrl: 'assets/images/book-demo.jpg'
     },
     {
-      id: 2,
+      id: 8,
       title: 'The Pioneers: The Heroic Story of the Settlers Who Brought the American Ideal West ',
       author: 'David McCullough',
       imageUrl: 'assets/images/book-demo-1.jpg'
     },
     {
-      id: 3,
+      id: 9,
       title: 'Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead',
       author: 'Brené Brown',
       imageUrl: 'assets/images/book-demo-2.jpg'
     },
     {
-      id: 1,
+      id: 10,
       title: 'How to Win Friends & Influence People',
       author: 'Dale Carnegie',
       imageUrl: 'assets/images/book-demo.jpg'
     },
     {
-      id: 2,
+      id: 11,
       title: 'The Pioneers: The Heroic Story of the Settlers Who Brought the American Ideal West ',
       author: 'David McCullough',
       imageUrl: 'assets/images/book-demo-1.jpg'
+    },
+    {
+      id: 12,
+      title: 'Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead',
+      author: 'Brené Brown',
+      imageUrl: 'assets/images/book-demo-2.jpg'
     }
   ];
 
@@ -90,7 +97,7 @@ export class CategoryBookListComponent implements OnInit {
   bookListData: BookModel[] = [
     {
       id: 1,
-      category: 'Self-Help',
+      category: 'Success Self-Help',
       title: 'How to Win Friends & Influence People',
       author: 'Dale Carnegie',
       price: '5',
@@ -150,7 +157,11 @@ export class CategoryBookListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.category = 'Self-Help';
+    this.category = 'Success Self-Help';
+  }
+
+  onShowBookList() {
+    this.showBookList = !this.showBookList;
   }
 
 }

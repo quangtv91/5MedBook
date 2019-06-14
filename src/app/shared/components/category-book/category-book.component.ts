@@ -13,7 +13,7 @@ export class CategoryBookComponent implements OnInit {
   rows = [
     {
       id: 1,
-      name: 'Self-Help',
+      name: 'Success Self-Help',
     },
     {
       id: 2,

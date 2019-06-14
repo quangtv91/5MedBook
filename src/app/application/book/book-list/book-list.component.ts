@@ -8,7 +8,7 @@ import {BookModel} from '../../../core/models/book/book.model';
 })
 export class BookListComponent implements OnInit {
 
-  showBookList: Boolean = false;
+  showBookList = false;
 
   bookListData: BookModel[] = [
     {

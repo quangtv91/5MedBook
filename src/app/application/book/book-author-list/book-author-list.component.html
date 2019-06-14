@@ -1,3 +1,70 @@
-<p>
-  book-author-list works!
-</p>
+<div class="container">
+  <span class="badge badge-light badge-page">{{nameAuthor}}</span>
+  <div class="content">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="author" *ngFor="let item of authorInfo;let item = index">
+          <img [src]="item.image" class="rounded-circle mx-auto d-block" alt="...">
+          <hr/>
+          <h5 class="name pb-2">About {{item.name}}</h5>
+          <span class="details d-block">{{item.about}}</span>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="owl-carousel-holder">
+          <div class="carousel-section">
+            <owl-carousel [options]="myCarouselOptions">
+              <div class="item" *ngFor="let image of myCarouselImages;let i = index">
+                <div class="card">
+                  <img [src]="image.imageUrl"/>
+                  <div class="card-body p-2">
+                    <div class="book-info">
+                      <span class="price">
+                        <span class="price-currency">$</span>
+                        <span class="price-whole">{{image.price}}</span>
+                        <span class="price-fractional">00</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </owl-carousel>
+          </div>
+        </div>
+        <div class="row py-3 content-detail" *ngFor="let item of bookListData; let item = index">
+          <div class="col-md-2">
+            <div class="book-image">
+              <a routerLink="/book-detail/1"><img [src]="item.imageUrl" class="rounded mx-auto d-block" alt="..."></a>
+            </div>
+          </div>
+          <div class="col-md-10">
+            <div class="book-info">
+              <a class="title d-block" routerLink="/book-detail/1">{{item.title}}</a>
+              <a class="author d-block" routerLink="/author">{{item.author}}</a>
+              <div class="book-details pt-3">
+                <div class="row px-3 pb-3 justify-content-between">
+                  <div>
+                <span class="price">
+                  <span class="price-currency">$</span>
+                  <span class="price-whole">{{item.price}}</span>
+                  <span class="price-fractional">00</span>
+                </span>
+                    <button class="btn btn-primary mx-3">Get this book</button>
+                    <button class="btn btn-default btn-cart">
+                      <i class="fa fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                  <div>
+                    <span class="downloads mr-5">{{item.downloads}} Downloads</span>
+                    <span class="year">Year: {{item.year}}</span>
+                  </div>
+                </div>
+                <span class="detail d-block">{{item.detail}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
