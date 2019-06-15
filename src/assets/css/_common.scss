@@ -181,14 +181,14 @@ h5 {
     margin: 15px 0;
   }
 
-  &.category-list {
+  &.badge-info {
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     box-shadow: 0 0 10px #ddd;
     -webkit-box-shadow: 0 0 10px #ddd;
     -moz-box-shadow: 0 0 10px #ddd;
 
-    .category-name {
+    span {
       color: $mainColor;
       font-weight: 600;
     }

@@ -1,5 +1,9 @@
 .badge {
   font-size: large;
+
+  &.badge-info {
+    font-size: inherit;
+  }
 }
 
 .rounded-circle {
