@@ -1,3 +1,69 @@
-<p>
-  checkout-list works!
-</p>
+<div class="container">
+  <span class="badge badge-light badge-page">Checkout List</span>
+  <span class="badge badge-light badge-page badge-info mt-0">{{dataLength}} Books Order</span>
+  <div class="content">
+    <div class="row py-3 content-detail" *ngFor="let item of checkoutListData; let item = index">
+      <div class="col-md-2">
+        <button class="btn btn-default btn-delete-cart" title="Delete Book" (click)="onDelete()"><i
+          class="fa fa-times"></i></button>
+        <div class="book-image">
+          <img [src]="item.imageUrl" class="rounded mx-auto d-block" alt="...">
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div class="book-info">
+          <a class="title d-block" routerLink="/book-detail/1">{{item.title}}</a>
+          <a class="author d-block" routerLink="/author">{{item.author}}</a>
+          <div class="book-details pt-3">
+            <div class="row px-3 pb-4 justify-content-between">
+              <div>
+                <button class="btn btn-primary" routerLink="/checkout-detail/1">Complete Order</button>
+              </div>
+              <div>
+                <span class="downloads mr-5">{{item.downloads}} Downloads</span>
+                <span class="extension mr-5">{{item.extension}}</span>
+                <span class="size mr-5">{{item.size}}</span>
+                <span class="year">Year: {{item.year}}</span>
+              </div>
+            </div>
+            <span class="price">${{item.price}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pt-3">
+      <div class="col-md-2">
+        <h6>Total: <span class="price">${{totalPrice}}</span></h6>
+      </div>
+      <div class="col-md-10">
+        <button type="submit" class="btn btn-primary d-block w-100" routerLink="/checkout-detail/1">Complete All Order
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Delete-->
+<div bsModal #deleteMyBookModal="bs-modal" class="modal fade" [config]="{ backdrop: 'static' }">
+  <div class="modal-dialog  modal-dialog-centered modal-confirm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Delete book</h5>
+        <button type="button" class="close" (click)="deleteMyBookModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <i class="fa fa-question-circle"></i> Are you sure to delete selected book item?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" (click)="onSubmitDelete()"><i class="fa fa-check"></i>
+          Yes
+        </button>
+        <button type="button" class="btn btn-secondary" (click)="deleteMyBookModal.hide()">
+          <i class="fa fa-times"></i> No
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

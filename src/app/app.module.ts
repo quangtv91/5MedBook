@@ -15,7 +15,7 @@ import {AppComponent} from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -35,14 +35,14 @@ import {AppComponent} from './app.component';
       confirmButtonText:
         '<i class="fa fa-check"></i> Yes',
       cancelButtonText:
-        '<i class="fa fa-times"></i> No',
+        '<i class="fa fa-times"></i> No'
     }),
     AppRoutingModule,
     CoreModule,
-    SharedModule,
+    SharedModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }

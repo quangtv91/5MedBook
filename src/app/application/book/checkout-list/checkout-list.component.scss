@@ -1,0 +1,21 @@
+.content {
+  .btn-delete-cart {
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    border-radius: 50%;
+    border: 1px solid #dc3545;
+    padding: 0px 5px;
+
+    &:hover {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25)
+    }
+  }
+
+
+}
+
+.price {
+  font-size: 24px;
+  color: #0030B8;
+}

@@ -12,13 +12,13 @@ export class CartListComponent implements OnInit {
     {
       id: 1,
       title: 'How to Win Friends & Influence People',
-      price: '5',
+      price: 5,
       imageUrl: 'assets/images/book-demo.jpg',
     },
     {
       id: 2,
       title: 'Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead',
-      price: '5',
+      price: 5,
       imageUrl: 'assets/images/book-demo-1.jpg',
     },
   ];

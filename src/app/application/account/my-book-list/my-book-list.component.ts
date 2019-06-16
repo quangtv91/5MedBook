@@ -1,6 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {ModalDirective} from 'ngx-bootstrap';
-import {BookService} from '../../../core/services/book/book.service';
 import {BookModel} from '../../../core/models/book/book.model';
 
 @Component({
@@ -26,7 +25,7 @@ export class MyBookListComponent implements OnInit {
         ' Carnegie nor the publishers, Simon and Schuster, anticipated more than this modest sale. To their amazement, the book became an' +
         ' overnight sensation, and edition after edition rolled off the presses to keep up with the increasing public demand. Now to Win' +
         ' Friends and InfEuence People took its place in publishing history as one of the all-time international best-sellers...',
-      price: '',
+      price: null,
       downloads: null,
       rate: 5
     },
@@ -43,30 +42,16 @@ export class MyBookListComponent implements OnInit {
       detail: 'Every day we experience the uncertainty, risks, and emotional exposure that define what it means to be vulnerable or to dare' +
         ' greatly. Based on 12 years of pioneering research, Dr. Brené Brown dispels the cultural myth that vulnerability is weakness and' +
         ' argues that it is, in truth, our most accurate measure of courage...',
-      price: '',
+      price: null,
       downloads: null,
       rate: 5
     }
   ];
 
-  constructor(
-    private bookService: BookService
-  ) {
+  constructor() {
   }
 
   ngOnInit() {
-  }
-
-  onDelete() {
-    this.deleteMyBookModal.show();
-  }
-
-  onSubmitDelete() {
-    this.bookService.deleteMyBook().subscribe(res => {
-      console.log(res);
-    }, error => {
-      console.log(error);
-    });
   }
 
 }

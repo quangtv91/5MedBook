@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {GlobalValidator} from '../../../shared/form-validation/validators';
-import {BookDetailModel} from '../../../core/models/book/book.model';
+import {GlobalValidator} from '../../../../shared/form-validation/validators';
+import {BookDetailModel} from '../../../../core/models/book/book.model';
 
 @Component({
   selector: 'app-book-detail',
@@ -16,6 +16,8 @@ export class BookDetailComponent implements OnInit {
   rate: Number = 5;
   rateSubmit;
   isReadonly: Boolean = false;
+  page = 1;
+  pdfSrc = '';
 
   bookDetailData: BookDetailModel[] = [
     {
@@ -23,7 +25,7 @@ export class BookDetailComponent implements OnInit {
       categoryName: 'Success Self-Help',
       title: 'How to Win Friends & Influence People',
       author: 'Dale Carnegie',
-      price: '5',
+      price: 5,
       downloads: 1500,
       isbn10: 7007007007,
       isbn13: 7007007007007,
@@ -100,6 +102,17 @@ export class BookDetailComponent implements OnInit {
     }
     console.log(this.rateSubmit);
     console.log(this.form.value);
+  }
+
+  onFileSelected() {
+    const img: any = document.querySelector('#file');
+    if (typeof (FileReader) !== 'undefined') {
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.pdfSrc = e.target.result;
+      };
+      reader.readAsArrayBuffer(img.files[0]);
+    }
   }
 
 }

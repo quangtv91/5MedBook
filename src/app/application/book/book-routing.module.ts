@@ -1,37 +1,42 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {BookListComponent} from './book-list/book-list.component';
-import {BookDetailComponent} from './book-detail/book-detail.component';
+import {BookDetailComponent} from './book-list/book-detail/book-detail.component';
 import {CheckoutListComponent} from './checkout-list/checkout-list.component';
+import {CheckoutDetailComponent} from './checkout-list/checkout-detail/checkout-detail.component';
 import {BookAuthorListComponent} from './book-author-list/book-author-list.component';
 import {CategoryBookListComponent} from './category-book-list/category-book-list.component';
 
 const routes: Routes = [
   {
     path: 'book-list',
-    component: BookListComponent,
+    component: BookListComponent
   },
   {
     path: 'book-detail/:id',
-    component: BookDetailComponent,
+    component: BookDetailComponent
   },
   {
     path: 'checkout-list',
-    component: CheckoutListComponent,
+    component: CheckoutListComponent
+  },
+  {
+    path: 'checkout-detail/:id',
+    component: CheckoutDetailComponent
   },
   {
     path: 'author',
-    component: BookAuthorListComponent,
+    component: BookAuthorListComponent
   },
   {
     path: 'category-list',
-    component: CategoryBookListComponent,
-  },
+    component: CategoryBookListComponent
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class BookRoutingModule {
 }

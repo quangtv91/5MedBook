@@ -15,5 +15,9 @@ export class BookService extends ApiService {
     return this.delete('');
   }
 
+  getPdf() {
+    return '/assets/pdf/pdf-sample.pdf';
+  }
+
 
 }

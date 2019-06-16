@@ -3,7 +3,7 @@ export interface BookModel {
   category: string;
   title: string;
   author: string;
-  price: string;
+  price: number;
   downloads: number;
   year: number;
   imageUrl: string;
@@ -19,7 +19,7 @@ export interface BookDetailModel {
   categoryName: string;
   title: string;
   author: string;
-  price: string;
+  price: number;
   downloads: number;
   isbn10: number;
   isbn13: number;

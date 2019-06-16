@@ -8,6 +8,8 @@ import {CarouselModule, ModalModule, RatingModule} from 'ngx-bootstrap';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 import {NgxSpinnerModule} from 'ngx-spinner';
 import {SweetAlert2Module} from '@sweetalert2/ngx-sweetalert2';
+import {OwlModule} from 'ngx-owl-carousel';
+import {PdfViewerModule} from 'ng2-pdf-viewer';
 import {CoreModule} from '../core/core.module';
 
 import {HomeComponent} from '../home/home.component';
@@ -17,12 +19,12 @@ import {SpinnerComponent} from './components/spinner/spinner.component';
 import {SwalAlertComponent} from './components/swal-alert/swal-alert.component';
 import {CategoryBookComponent} from './components/category-book/category-book.component';
 import {CartListComponent} from './components/cart-list/cart-list.component';
-import {OwlModule} from 'ngx-owl-carousel';
+import {CommonService} from './common-service/common.service';
 
 const Layout = [
   HomeComponent,
   HeaderComponent,
-  FooterComponent,
+  FooterComponent
 ];
 
 @NgModule({
@@ -32,7 +34,7 @@ const Layout = [
     SpinnerComponent,
     SwalAlertComponent,
     CategoryBookComponent,
-    CartListComponent,
+    CartListComponent
   ],
   imports: [
     CommonModule,
@@ -47,8 +49,9 @@ const Layout = [
     NgxDatatableModule,
     NgxSpinnerModule,
     SweetAlert2Module,
-    CoreModule,
-    OwlModule
+    OwlModule,
+    PdfViewerModule,
+    CoreModule
   ],
   exports: [
     CommonModule,
@@ -63,12 +66,15 @@ const Layout = [
     NgxSpinnerModule,
     SweetAlert2Module,
     OwlModule,
+    PdfViewerModule,
     SpinnerComponent,
     SwalAlertComponent,
     CategoryBookComponent,
-    CartListComponent,
+    CartListComponent
   ],
-  providers: [],
+  providers: [
+    CommonService
+  ]
 })
 export class SharedModule {
 }

@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   @ViewChild('logoutModal') logoutModal: ModalDirective;
 
   constructor(
-    private router: Router,
+    private router: Router
   ) {
   }
 

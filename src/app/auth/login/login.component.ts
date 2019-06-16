@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
   private buildLoginForm() {
     this.loginForm = this.formBuilder.group({
       email: ['', Validators.compose([Validators.required, GlobalValidator.emailFormat])],
-      password: ['', Validators.required],
+      password: ['', Validators.required]
     });
   }
 
@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', Validators.compose([Validators.required, GlobalValidator.emailFormat])],
-      password: ['', Validators.required],
+      password: ['', Validators.required]
     });
   }
 
@@ -67,6 +67,7 @@ export class LoginComponent implements OnInit {
     const data = this.signUpForm.value;
     this.authService.signUp(data).subscribe(res => {
       console.log(res);
+      this.router.navigate(['/book-list']);
     }, error => {
       console.log(error);
     });

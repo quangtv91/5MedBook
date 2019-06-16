@@ -25,7 +25,7 @@ export class BookAuthorListComponent implements OnInit {
       category: 'Success Self-Help',
       title: 'How to Win Friends & Influence People',
       author: 'Dale Carnegie',
-      price: '5',
+      price: 5,
       downloads: 1500,
       year: 2019,
       imageUrl: 'assets/images/book-demo.jpg',
@@ -43,7 +43,7 @@ export class BookAuthorListComponent implements OnInit {
       category: 'Success Self-Help',
       title: 'How to Stop Worrying and Start Living',
       author: 'Dale Carnegie',
-      price: '5',
+      price: 5,
       downloads: 1500,
       year: 2019,
       imageUrl: 'assets/images/book-demo_1.jpg',
@@ -60,7 +60,7 @@ export class BookAuthorListComponent implements OnInit {
       category: 'Success Self-Help',
       title: 'The Quick and Easy Way to Effective Speaking',
       author: 'Dale Carnegie',
-      price: '5',
+      price: 5,
       downloads: 1500,
       year: 2019,
       imageUrl: 'assets/images/book-demo_2.jpg',
@@ -76,47 +76,47 @@ export class BookAuthorListComponent implements OnInit {
   myCarouselImages = [
     {
       id: 1,
-      price: '5',
+      price: 5,
       imageUrl: 'assets/images/book-demo.jpg'
     },
     {
       id: 2,
-      price: '5',
+      price: 5,
       imageUrl: 'assets/images/book-demo_1.jpg'
     },
     {
       id: 3,
-      price: '5',
+      price: 5,
       imageUrl: 'assets/images/book-demo_2.jpg'
     },
     {
       id: 4,
-      price: '5',
+      price: 5,
       imageUrl: 'assets/images/book-demo_3.jpg'
     },
     {
       id: 5,
-      price: '5',
+      price: 5,
       imageUrl: 'assets/images/book-demo_4.jpg'
     },
     {
       id: 6,
-      price: '5',
+      price: 5,
       imageUrl: 'assets/images/book-demo_1.jpg'
     },
     {
       id: 7,
-      price: '5',
+      price: 5,
       imageUrl: 'assets/images/book-demo_2.jpg'
     },
     {
       id: 8,
-      price: '5',
+      price: 5,
       imageUrl: 'assets/images/book-demo_3.jpg'
     },
     {
       id: 9,
-      price: '5',
+      price: 5,
       imageUrl: 'assets/images/book-demo_4.jpg'
     }
   ];
