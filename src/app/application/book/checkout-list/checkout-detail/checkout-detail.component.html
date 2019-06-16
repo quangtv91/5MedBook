@@ -1,3 +1,47 @@
-<p>
-  checkout-detail works!
-</p>
+<div class="container">
+  <span class="badge badge-light badge-page">Checkout</span>
+  <h1 class="logo">5MedBook</h1>
+  <div class="content">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="book-image">
+                  <img src="assets/images/paypal-logo.png" class="rounded mx-auto d-block" alt="Paypal">
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="row justify-content-between">
+                  <div></div>
+                  <div class="pr-4">
+                    <i class="fa fa-shopping-cart"></i> <span class="price pl-3">$1000 USD</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+          <div class="card-footer">
+            <button type="submit" class="btn btn-primary d-block w-100 pay" routerLink="/checkout-detail/1">Pay Now
+            </button>
+            <h6 class="mt-2">This transaction wil appear on your statement as PayPal * 5MedBook </h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="book-image">
+          <img src="assets/images/paypal.PNG" class="rounded mx-auto d-block" alt="Paypal">
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-link d-block w-100 text-left" routerLink="/book-list">Cancel and return to
+    5MedBook
+  </button>
+</div>

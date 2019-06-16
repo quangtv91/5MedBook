@@ -1,0 +1,42 @@
+$logoTextColor: #0030B8;
+
+.logo {
+  color: $logoTextColor;
+  margin-left: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.content {
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+
+  .card {
+    border: none;
+
+    .card-header, .card-footer {
+      background-color: #ffffff;
+    }
+
+    .fa-shopping-cart {
+      font-size: large;
+    }
+
+    .price {
+      font-weight: 600;
+    }
+
+    .btn.pay {
+      color: #ffffff;
+      background: #0070BA;
+    }
+
+    h6 {
+      color: #8B8F93;
+    }
+  }
+
+}
+
+

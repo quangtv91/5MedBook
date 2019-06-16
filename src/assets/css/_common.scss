@@ -62,6 +62,11 @@ h5 {
   color: #dc3545;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 // btn styles
 .btn {
   &.btn-primary {
@@ -323,13 +328,6 @@ label.required {
 
     .detail, .downloads {
       color: #B4B4B4;
-    }
-  }
-
-  .book-image {
-    img {
-      max-width: 100%;
-      height: auto;
     }
   }
 
