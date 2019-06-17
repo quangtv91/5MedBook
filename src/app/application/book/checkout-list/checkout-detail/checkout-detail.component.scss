@@ -32,9 +32,14 @@ $logoTextColor: #0030B8;
       background: #0070BA;
     }
 
-    h6 {
+    h6, .card-text {
       color: #8B8F93;
     }
+  }
+
+  input[type="radio"], input[type="checkbox"] {
+    margin-top: 3px !important;
+    margin-left: 0px !important;
   }
 
 }
