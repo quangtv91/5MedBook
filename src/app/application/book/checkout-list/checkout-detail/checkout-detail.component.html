@@ -32,14 +32,16 @@
             <div class="pay-with mb-5">
               <div class="row mx-0">
                 <input class="m-3 master-card" type="radio" id="masterCard" name="payType" value="masterCard"
-                       formControlName="payType">
-                <label for="masterCard"><img src="assets/images/mastercar.png" class="rounded mx-auto d-block pay-card" alt="Paypal"></label>
+                       formControlName="payType" (change)="onChangePayType()">
+                <label for="masterCard"><img src="assets/images/mastercar.png" class="rounded mx-auto d-block pay-card"
+                                             alt="Paypal"></label>
                 <input class="m-3 credit-card" type="radio" id="creditCard" name="payType" value="creditCard"
-                formControlName="payType">
-                <label for="creditCard"><img src="assets/images/visa.png" class="rounded mx-auto d-block pay-card" alt="Paypal"></label>
+                       formControlName="payType" (change)="onChangePayType()">
+                <label for="creditCard"><img src="assets/images/visa.png" class="rounded mx-auto d-block pay-card"
+                                             alt="Paypal"></label>
               </div>
               <div class="row mx-0 justify-content-end">
-                Total VND
+                <span class="price-vnd d-block">{{priceVnd}}<span class="currency d-block text-right">VND</span></span>
               </div>
             </div>
             <button type="submit" class="btn btn-primary d-block w-100 pay" (click)="onSubmitData()">Pay Now

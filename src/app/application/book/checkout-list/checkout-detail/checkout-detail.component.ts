@@ -11,10 +11,15 @@ export class CheckoutDetailComponent implements OnInit {
   form: FormGroup;
   name;
   address;
+  priceVnd;
+  priceMasterCardVnd;
+  priceCreditCardVnd;
   orderInfo = [
     {
       name: 'Do Do',
-      address: 'Ha Dong, Ha Noi, Vietnam'
+      address: 'Ha Dong, Ha Noi, Vietnam',
+      priceMasterCardVnd: 21000,
+      priceCreditCardVnd: 23000
     }
   ];
 
@@ -26,6 +31,7 @@ export class CheckoutDetailComponent implements OnInit {
   ngOnInit() {
     this.buildForm();
     this.getOrderInfo();
+    this.onChangePayType();
   }
 
   private buildForm() {
@@ -41,6 +47,17 @@ export class CheckoutDetailComponent implements OnInit {
     const orderInfoObj = this.orderInfo.find(it => it === it);
     this.name = orderInfoObj.name;
     this.address = orderInfoObj.address;
+    this.priceMasterCardVnd = orderInfoObj.priceMasterCardVnd;
+    this.priceCreditCardVnd = orderInfoObj.priceCreditCardVnd;
+  }
+
+  onChangePayType() {
+    const payType = this.form.get('payType').value;
+    if (payType === 'masterCard') {
+      this.priceVnd = this.priceMasterCardVnd;
+    } else {
+      this.priceVnd = this.priceCreditCardVnd;
+    }
   }
 
   onSubmitData() {
@@ -48,7 +65,8 @@ export class CheckoutDetailComponent implements OnInit {
     const dataObject = {
       payType: formValue.payType,
       name: this.name,
-      address: this.address
+      address: this.address,
+      priceVnd: this.priceVnd
     };
     console.log(dataObject);
   }
