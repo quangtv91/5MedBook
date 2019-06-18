@@ -31,14 +31,12 @@
             <h5>Pay with</h5>
             <div class="pay-with mb-5">
               <div class="row mx-0">
-                <input class="m-3" type="radio" id="masterCard" name="payType" value="masterCard"
+                <input class="m-3 master-card" type="radio" id="masterCard" name="payType" value="masterCard"
                        formControlName="payType">
-                <label for="masterCard">Master Card</label>
-              </div>
-              <div class="row mx-0">
-                <input class="m-3" type="radio" id="creditCard" name="payType" value="creditCard"
-                       formControlName="payType">
-                <label for="creditCard">Credit Card</label>
+                <label for="masterCard"><img src="assets/images/mastercar.png" class="rounded mx-auto d-block pay-card" alt="Paypal"></label>
+                <input class="m-3 credit-card" type="radio" id="creditCard" name="payType" value="creditCard"
+                formControlName="payType">
+                <label for="creditCard"><img src="assets/images/visa.png" class="rounded mx-auto d-block pay-card" alt="Paypal"></label>
               </div>
               <div class="row mx-0 justify-content-end">
                 Total VND

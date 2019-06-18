@@ -38,8 +38,21 @@ $logoTextColor: #0030B8;
   }
 
   input[type="radio"], input[type="checkbox"] {
-    margin-top: 3px !important;
-    margin-left: 0px !important;
+    margin-top: 20px !important;
+    margin-right: 5px!important;
+  }
+  
+  .master-card {
+    margin-left: 0px!important
+  }
+
+  .credit-card {
+    margin-left: 30px!important
+  }
+
+  .pay-card {
+    width: 50px;
+    height: 50px;
   }
 
 }
