@@ -33,7 +33,7 @@ import {AppComponent} from './app.component';
       confirmButtonClass: 'btn btn-primary mr-2',
       cancelButtonClass: 'btn btn-secondary',
       confirmButtonText:
-        '<i class="fa fa-check"></i> Yes',
+        '<i class="fa fa-check"></i> OK',
       cancelButtonText:
         '<i class="fa fa-times"></i> No'
     }),

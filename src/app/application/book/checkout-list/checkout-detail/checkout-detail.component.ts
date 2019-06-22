@@ -1,5 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
+import {SwalAlertService} from '../../../../shared/components/swal-alert/swal-alert.service';
+import {SwalAlertComponent} from '../../../../shared/components/swal-alert/swal-alert.component';
 
 @Component({
   selector: 'app-checkout-detail',
@@ -7,6 +9,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
   styleUrls: ['./checkout-detail.component.scss']
 })
 export class CheckoutDetailComponent implements OnInit {
+  @ViewChild('checkoutSwalAlert') private checkoutSwalAlert: SwalAlertComponent;
 
   form: FormGroup;
   name;
@@ -24,7 +27,8 @@ export class CheckoutDetailComponent implements OnInit {
   ];
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private swalAlertService: SwalAlertService
   ) {
   }
 
@@ -69,6 +73,11 @@ export class CheckoutDetailComponent implements OnInit {
       priceVnd: this.priceVnd
     };
     console.log(dataObject);
+    if (this.priceVnd === this.priceMasterCardVnd) {
+      this.swalAlertService.openSuccessModal();
+    } else {
+      this.swalAlertService.openFailModal('Unable to complete your payment right now', 'Payment Error');
+    }
   }
 
 }

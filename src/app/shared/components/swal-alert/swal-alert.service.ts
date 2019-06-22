@@ -19,7 +19,7 @@ export class SwalAlertService {
     }, 200);
   }
 
-  openFailModal(message: string, title?: string) {
+  openFailModal(message?: string, title?: string) {
     this.title = title ? title : '';
     this.message = message;
 
