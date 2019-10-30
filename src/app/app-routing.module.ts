@@ -13,6 +13,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+      },
+      {
+        path: '',
         loadChildren: './application/book/book.module#BookModule',
         data: {
           preload: true
