@@ -492,6 +492,11 @@ label.required {
   display: block;
   border: 1px solid grey;
   border-top: none;
+
+  .right-col {
+    text-align: right !important;
+  }
+
 }
 
 .ngx-datatable.bootstrap .datatable-body .datatable-body-row .datatable-body-cell {
@@ -507,6 +512,3 @@ label.required {
   border-top: none;
 }
 
-.center-col {
-  text-align: right !important;
-}

@@ -196,9 +196,9 @@ export class BookListComponent implements OnInit {
     );
   }
 
-  getCellClass({row, column, value}): any {
+  setRightClass(): any {
     return {
-      'center-col': true
+      'right-col': true
     };
   }
 

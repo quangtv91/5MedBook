@@ -1,17 +1,9 @@
 <div class="container">
   <div class="py-4">
-    <!--{prop: 'category'},-->
-    <!--{name: 'title'},-->
-    <!--{name: 'author'},-->
-    <!--{name: 'price'},-->
-    <!--{name: 'downloads'},-->
-    <!--{name: 'year'},-->
-    <!--{name: 'detail'}-->
     <h4 class="logo">Datatable</h4>
     <ngx-datatable
       #table
       class="bootstrap"
-
       [columnMode]="ColumnMode.force"
       [headerHeight]="50"
       [footerHeight]="50"
@@ -21,23 +13,37 @@
       [selected]="selected"
       [selectionType]="'row'"
       (select)='onSelect($event)'>
-
-      <ngx-datatable-column name="category">
+      <ngx-datatable-column name="category" [resizeable]="false">
         <ng-template let-row="row" ngx-datatable-cell-template>
           {{row.category}}
         </ng-template>
       </ngx-datatable-column>
-      <ngx-datatable-column name="title" headerClass="center-col" [cellClass]="getCellClass">
+      <ngx-datatable-column name="title" [resizeable]="false">
         <ng-template let-row="row" ngx-datatable-cell-template>
           {{row.title}}
         </ng-template>
       </ngx-datatable-column>
-      <ngx-datatable-column name="author"></ngx-datatable-column>
-      <ngx-datatable-column name="price"></ngx-datatable-column>
-      <ngx-datatable-column name="downloads"></ngx-datatable-column>
-      <ngx-datatable-column name="year"></ngx-datatable-column>
-      <ngx-datatable-column name="detail"></ngx-datatable-column>
-
+      <ngx-datatable-column name="author" [resizeable]="false"></ngx-datatable-column>
+      <ngx-datatable-column name="price" headerClass="right-col" [cellClass]="setRightClass">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{row.price}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="downloads" [resizeable]="false" headerClass="right-col" [cellClass]="setRightClass">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{row.downloads}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="year" [resizeable]="false" headerClass="right-col" [cellClass]="setRightClass">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{row.year}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="detail" [resizeable]="false">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{row.detail}}
+        </ng-template>
+      </ngx-datatable-column>
     </ngx-datatable>
     <div class="selected-column">
       <h4>Available Columns</h4>
